@@ -68,7 +68,8 @@
             // btnClose
             // 
             btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClose.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Font = new Font("MS Reference Sans Serif", 8.25F);
             btnClose.Location = new Point(782, 12);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(34, 27);
@@ -80,7 +81,8 @@
             // btnMaximize
             // 
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximize.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMaximize.Cursor = Cursors.Hand;
+            btnMaximize.Font = new Font("MS Reference Sans Serif", 8.25F);
             btnMaximize.Location = new Point(742, 12);
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new Size(34, 27);
@@ -92,7 +94,8 @@
             // btnMinimize
             // 
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMinimize.Cursor = Cursors.Hand;
+            btnMinimize.Font = new Font("MS Reference Sans Serif", 8.25F);
             btnMinimize.Location = new Point(702, 12);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(34, 27);
@@ -108,6 +111,7 @@
             ClientSize = new Size(828, 497);
             Controls.Add(pnlSideMenu);
             Controls.Add(pnlTitleBar);
+            Font = new Font("MS Reference Sans Serif", 8.25F);
             Name = "frmMotherForm";
             Text = "Form1";
             Load += Form1_Load;
