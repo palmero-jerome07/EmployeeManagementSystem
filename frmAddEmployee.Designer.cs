@@ -132,7 +132,9 @@
             // 
             // cmbSection
             // 
+            cmbSection.AutoCompleteCustomSource.AddRange(new string[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
             cmbSection.FormattingEnabled = true;
+            cmbSection.Items.AddRange(new object[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
             cmbSection.Location = new Point(136, 156);
             cmbSection.Name = "cmbSection";
             cmbSection.Size = new Size(276, 23);

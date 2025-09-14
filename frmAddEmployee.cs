@@ -34,16 +34,19 @@ namespace EmployeeManagementSystem
 
         private void btnInsertUpdate_Click(object sender, EventArgs e)
         {
+
+            //Validation for empty fields
+            if (string.IsNullOrWhiteSpace(txtEmpID.Text) || string.IsNullOrWhiteSpace(txtRequestorName.Text) || string.IsNullOrWhiteSpace(txtEmailAddress.Text) ||  string.IsNullOrWhiteSpace(cmbSection.Text) || string.IsNullOrWhiteSpace(txtLocalNumber.Text))
+            {
+                MessageBox.Show("Please fill up all the fields.", "Not found.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
+
             bool dtg_addrequestor = false;
             string EMS_data = string.Empty;
             EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
 
-           if (txtEmpID.Text == "" || txtRequestorName.Text == "" || txtEmailAddress.Text == "" || cmbSection.Text == "" || txtLocalNumber.Text == "")
-            {
-                MessageBox.Show("Please fill up all the fields.", "Not found.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                return;
-            }
             if (dtg_addrequestor == true)
             {
                 MessageBox.Show("This account '" + txtRequestorName.Text + "' is already exist.", "Not found.",
