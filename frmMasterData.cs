@@ -56,13 +56,15 @@ namespace EmployeeManagementSystem
             // 
             // dtgMasterData
             // 
-            dtgMasterData.BackgroundColor = Color.Linen;
+            dtgMasterData.BackgroundColor = Color.FromArgb(236, 240, 241);
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
             dtgMasterData.Location = new Point(0, 28);
             dtgMasterData.Name = "dtgMasterData";
             dtgMasterData.Size = new Size(748, 345);
             dtgMasterData.TabIndex = 1;
+            dtgMasterData.UseWaitCursor = true;
+            dtgMasterData.CellContentClick += dtgMasterData_CellContentClick;
             // 
             // frmMasterData
             // 
@@ -90,6 +92,11 @@ namespace EmployeeManagementSystem
         {
             string select_tblrequestorlist = "SELECT * FROM tblEmployeeData ORDER BY EmployeeNumber DESC";
             CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
+        }
+
+        private void dtgMasterData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

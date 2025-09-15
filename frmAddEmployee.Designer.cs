@@ -133,6 +133,7 @@
             // cmbSection
             // 
             cmbSection.AutoCompleteCustomSource.AddRange(new string[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
+            cmbSection.FlatStyle = FlatStyle.Popup;
             cmbSection.FormattingEnabled = true;
             cmbSection.Items.AddRange(new object[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
             cmbSection.Location = new Point(136, 156);
@@ -142,6 +143,7 @@
             // 
             // txtLocalNumber
             // 
+            txtLocalNumber.BorderStyle = BorderStyle.FixedSingle;
             txtLocalNumber.Location = new Point(136, 125);
             txtLocalNumber.Name = "txtLocalNumber";
             txtLocalNumber.Size = new Size(276, 23);
@@ -149,6 +151,7 @@
             // 
             // txtEmailAddress
             // 
+            txtEmailAddress.BorderStyle = BorderStyle.FixedSingle;
             txtEmailAddress.Location = new Point(136, 96);
             txtEmailAddress.Name = "txtEmailAddress";
             txtEmailAddress.Size = new Size(452, 23);
@@ -156,6 +159,7 @@
             // 
             // txtRequestorName
             // 
+            txtRequestorName.BorderStyle = BorderStyle.FixedSingle;
             txtRequestorName.Location = new Point(136, 67);
             txtRequestorName.Name = "txtRequestorName";
             txtRequestorName.Size = new Size(452, 23);
@@ -163,6 +167,7 @@
             // 
             // txtEmpID
             // 
+            txtEmpID.BorderStyle = BorderStyle.FixedSingle;
             txtEmpID.Location = new Point(136, 37);
             txtEmpID.Name = "txtEmpID";
             txtEmpID.Size = new Size(276, 23);
