@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMotherForm));
             pnlSideMenu = new Panel();
+            lblFooter = new Label();
             btnAddEmp = new Button();
             btnMasterData = new Button();
             panel1 = new Panel();
@@ -46,6 +47,7 @@
             // 
             pnlSideMenu.BackColor = Color.FromArgb(43, 77, 95);
             pnlSideMenu.BorderStyle = BorderStyle.FixedSingle;
+            pnlSideMenu.Controls.Add(lblFooter);
             pnlSideMenu.Controls.Add(btnAddEmp);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Controls.Add(panel1);
@@ -55,11 +57,25 @@
             pnlSideMenu.Size = new Size(220, 322);
             pnlSideMenu.TabIndex = 0;
             // 
+            // lblFooter
+            // 
+            lblFooter.AutoSize = true;
+            lblFooter.BackColor = Color.Transparent;
+            lblFooter.Dock = DockStyle.Bottom;
+            lblFooter.ForeColor = SystemColors.AppWorkspace;
+            lblFooter.Location = new Point(0, 305);
+            lblFooter.Name = "lblFooter";
+            lblFooter.Size = new Size(180, 15);
+            lblFooter.TabIndex = 4;
+            lblFooter.Text = "© 2025 PUGE. All rights reserved.";
+            lblFooter.TextAlign = ContentAlignment.BottomCenter;
+            // 
             // btnAddEmp
             // 
             btnAddEmp.BackColor = Color.FromArgb(60, 173, 150);
             btnAddEmp.Cursor = Cursors.Hand;
             btnAddEmp.Dock = DockStyle.Top;
+            btnAddEmp.FlatStyle = FlatStyle.Flat;
             btnAddEmp.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddEmp.ForeColor = Color.White;
             btnAddEmp.Location = new Point(0, 46);
@@ -69,12 +85,15 @@
             btnAddEmp.Text = "➕ ADD EMPLOYEE";
             btnAddEmp.UseVisualStyleBackColor = false;
             btnAddEmp.Click += btnAddEmp_Click;
+            btnAddEmp.MouseEnter += btnAddEmp_MouseEnter;
+            btnAddEmp.MouseLeave += btnAddEmp_MouseLeave;
             // 
             // btnMasterData
             // 
             btnMasterData.BackColor = Color.FromArgb(60, 173, 150);
             btnMasterData.Cursor = Cursors.Hand;
             btnMasterData.Dock = DockStyle.Top;
+            btnMasterData.FlatStyle = FlatStyle.Flat;
             btnMasterData.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMasterData.ForeColor = Color.White;
             btnMasterData.Location = new Point(0, 0);
@@ -84,6 +103,8 @@
             btnMasterData.Text = "📊 MASTER DATA";
             btnMasterData.UseVisualStyleBackColor = false;
             btnMasterData.Click += btnMasterData_Click;
+            btnMasterData.MouseEnter += btnMasterData_MouseEnter;
+            btnMasterData.MouseLeave += btnMasterData_MouseLeave;
             // 
             // panel1
             // 
@@ -119,6 +140,8 @@
             btnClose.Text = "🗙";
             btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
+            btnClose.MouseEnter += btnClose_MouseEnter;
+            btnClose.MouseLeave += btnClose_MouseLeave;
             // 
             // btnMaximize
             // 
@@ -171,6 +194,7 @@
             Text = "Employee Management System";
             Load += frmMotherForm_Load;
             pnlSideMenu.ResumeLayout(false);
+            pnlSideMenu.PerformLayout();
             pnlTitleBar.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -186,5 +210,6 @@
         private Button btnMasterData;
         private Button btnAddEmp;
         private Panel pnlStage;
+        private Label lblFooter;
     }
 }

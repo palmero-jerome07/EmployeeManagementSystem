@@ -75,5 +75,25 @@ namespace EmployeeManagementSystem
         {
 
         }
+
+        private void btnInsertUpdate_MouseEnter(object sender, EventArgs e)
+        {
+            btnInsertUpdate.BackColor = Color.FromArgb(14, 102, 85);
+        }
+
+        private void btnInsertUpdate_MouseLeave(object sender, EventArgs e)
+        {
+            btnInsertUpdate.BackColor = Color.FromArgb(26, 188, 156);
+        }
+
+        private void button2_MouseEnter(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(14, 102, 85);
+        }
+
+        private void button2_MouseLeave(object sender, EventArgs e)
+        {
+            btnInsertUpdate.BackColor = Color.FromArgb(26, 188, 156);
+        }
     }
 }

@@ -52,6 +52,7 @@ namespace EmployeeManagementSystem
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            lblFooter.Text = $"© {DateTime.Now.Year} PUGE. All rights reserved.";
         }
 
         private void OpenChildForm(Form childform)
@@ -80,5 +81,38 @@ namespace EmployeeManagementSystem
         {
             OpenChildForm(new frmAddEmployee());
         }
+
+        private void btnMasterData_MouseEnter(object sender, EventArgs e)
+        {
+            btnMasterData.BackColor = Color.FromArgb(14, 102, 85);
+        }
+
+        private void btnMasterData_MouseLeave(object sender, EventArgs e)
+        {
+            btnMasterData.BackColor = Color.FromArgb(26, 188, 156);
+        }
+
+        private void btnAddEmp_MouseEnter(object sender, EventArgs e)
+        {
+            btnAddEmp.BackColor = Color.FromArgb(14, 102, 85);
+        }
+
+        private void btnAddEmp_MouseLeave(object sender, EventArgs e)
+        {
+            btnAddEmp.BackColor = Color.FromArgb(26, 188, 156);
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.FromArgb(231, 76, 60);
+            btnClose.ForeColor = Color.White;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.FromArgb(236, 240, 241);
+            btnClose.ForeColor = Color.Black;
+        }
+
     }
 }

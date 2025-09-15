@@ -82,6 +82,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.FromArgb(236, 240, 250);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(btnInsertUpdate);
             groupBox1.Controls.Add(cmbSection);
@@ -96,9 +97,9 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(12, 53);
+            groupBox1.Location = new Point(12, 34);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(610, 226);
+            groupBox1.Size = new Size(616, 240);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Employee Details Manual Insert and Update";
@@ -117,6 +118,8 @@
             button2.Text = "Search";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
+            button2.MouseEnter += button2_MouseEnter;
+            button2.MouseLeave += button2_MouseLeave;
             // 
             // btnInsertUpdate
             // 
@@ -131,6 +134,8 @@
             btnInsertUpdate.Text = "INSERT/UPDATE";
             btnInsertUpdate.UseVisualStyleBackColor = false;
             btnInsertUpdate.Click += btnInsertUpdate_Click;
+            btnInsertUpdate.MouseEnter += btnInsertUpdate_MouseEnter;
+            btnInsertUpdate.MouseLeave += btnInsertUpdate_MouseLeave;
             // 
             // cmbSection
             // 
@@ -225,11 +230,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Linen;
+            BackColor = Color.FromArgb(236, 240, 241);
             ClientSize = new Size(748, 373);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(panel1);
+            Cursor = Cursors.Hand;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmAddEmployee";
             Text = "Add Employee";
