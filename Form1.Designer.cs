@@ -166,7 +166,6 @@
             Controls.Add(pnlStage);
             Controls.Add(pnlSideMenu);
             Controls.Add(pnlTitleBar);
-            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMotherForm";
             Text = "Employee Management System";
