@@ -114,5 +114,32 @@ namespace EmployeeManagementSystem
             btnClose.ForeColor = Color.Black;
         }
 
+        private void pnlStage_MouseEnter(object sender, EventArgs e)
+        {
+            pnlStage.BackColor = Color.FromArgb(245, 246, 250);
+        }
+
+        private void pnlStage_MouseLeave(object sender, EventArgs e)
+        {
+            pnlStage.BackColor = Color.FromArgb(255, 255, 255);
+        }
+
+        private void lblHeader_Click(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Common.ReleaseCapture();
+                Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Common.ReleaseCapture();
+                Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
+            }
+        }
     }
 }

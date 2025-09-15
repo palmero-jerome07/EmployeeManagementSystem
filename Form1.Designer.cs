@@ -35,12 +35,15 @@
             btnMasterData = new Button();
             panel1 = new Panel();
             pnlTitleBar = new Panel();
+            pictureBox1 = new PictureBox();
+            lblHeader = new Label();
             btnClose = new Button();
             btnMaximize = new Button();
             btnMinimize = new Button();
             pnlStage = new Panel();
             pnlSideMenu.SuspendLayout();
             pnlTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnlSideMenu
@@ -117,6 +120,8 @@
             // 
             pnlTitleBar.BackColor = Color.FromArgb(39, 58, 74);
             pnlTitleBar.BorderStyle = BorderStyle.FixedSingle;
+            pnlTitleBar.Controls.Add(pictureBox1);
+            pnlTitleBar.Controls.Add(lblHeader);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
@@ -126,6 +131,29 @@
             pnlTitleBar.Size = new Size(748, 51);
             pnlTitleBar.TabIndex = 2;
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(11, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            pictureBox1.MouseDown += pictureBox1_Click;
+            // 
+            // lblHeader
+            // 
+            lblHeader.AutoSize = true;
+            lblHeader.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHeader.ForeColor = Color.White;
+            lblHeader.Location = new Point(49, 12);
+            lblHeader.Name = "lblHeader";
+            lblHeader.Size = new Size(304, 23);
+            lblHeader.TabIndex = 3;
+            lblHeader.Text = "Employee Management System";
+            lblHeader.MouseDown += lblHeader_Click;
             // 
             // btnClose
             // 
@@ -173,12 +201,14 @@
             // 
             // pnlStage
             // 
-            pnlStage.BackColor = Color.FromArgb(236, 240, 241);
+            pnlStage.BackColor = Color.FromArgb(245, 246, 250);
             pnlStage.Dock = DockStyle.Fill;
             pnlStage.Location = new Point(220, 51);
             pnlStage.Name = "pnlStage";
             pnlStage.Size = new Size(528, 322);
             pnlStage.TabIndex = 3;
+            pnlStage.MouseEnter += pnlStage_MouseEnter;
+            pnlStage.MouseLeave += pnlStage_MouseLeave;
             // 
             // frmMotherForm
             // 
@@ -189,6 +219,7 @@
             Controls.Add(pnlStage);
             Controls.Add(pnlSideMenu);
             Controls.Add(pnlTitleBar);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMotherForm";
             Text = "Employee Management System";
@@ -196,6 +227,8 @@
             pnlSideMenu.ResumeLayout(false);
             pnlSideMenu.PerformLayout();
             pnlTitleBar.ResumeLayout(false);
+            pnlTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -211,5 +244,7 @@
         private Button btnAddEmp;
         private Panel pnlStage;
         private Label lblFooter;
+        private Label lblHeader;
+        private PictureBox pictureBox1;
     }
 }
