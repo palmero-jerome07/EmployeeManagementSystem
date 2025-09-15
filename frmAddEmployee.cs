@@ -38,7 +38,7 @@ namespace EmployeeManagementSystem
             //Validation for empty fields
             if (string.IsNullOrWhiteSpace(txtEmpID.Text) || string.IsNullOrWhiteSpace(txtRequestorName.Text) || string.IsNullOrWhiteSpace(txtEmailAddress.Text) ||  string.IsNullOrWhiteSpace(cmbSection.Text) || string.IsNullOrWhiteSpace(txtLocalNumber.Text))
             {
-                MessageBox.Show("Please fill up all the fields.", "Not found.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Please fill up all the fields.", "Missing fields", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
             }
 
@@ -61,6 +61,14 @@ namespace EmployeeManagementSystem
 
                 CRUD.CRUD.CUD(add_requestor);
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Afrer saving clear all fields
+                txtEmpID.Text = "";
+                txtRequestorName.Text = "";
+                txtEmailAddress.Text = "";
+                cmbSection.Text = "";
+                txtLocalNumber.Text = "";
+
             }
         }
     }

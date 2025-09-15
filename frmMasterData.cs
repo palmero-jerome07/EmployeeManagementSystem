@@ -49,13 +49,14 @@ namespace EmployeeManagementSystem
             lblMasterData.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMasterData.Location = new Point(12, 4);
             lblMasterData.Name = "lblMasterData";
-            lblMasterData.Size = new Size(117, 20);
+            lblMasterData.Size = new Size(118, 20);
             lblMasterData.TabIndex = 0;
             lblMasterData.Text = "📊 Master Data";
             lblMasterData.Click += lblMasterData_Click;
             // 
             // dtgMasterData
             // 
+            dtgMasterData.BackgroundColor = Color.Linen;
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
             dtgMasterData.Location = new Point(0, 28);
