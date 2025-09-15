@@ -52,7 +52,7 @@ namespace EmployeeManagementSystem
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            lblFooter.Text = $"© {DateTime.Now.Year} PUGE. All rights reserved.";
+            lblFooter.Text = $"© {DateTime.Now.Year} EMS. All rights reserved.";
         }
 
         private void OpenChildForm(Form childform)

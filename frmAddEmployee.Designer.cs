@@ -57,7 +57,7 @@
             panel1.ForeColor = Color.FromArgb(236, 240, 241);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(748, 28);
+            panel1.Size = new Size(1500, 28);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -97,9 +97,9 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(12, 34);
+            groupBox1.Location = new Point(11, 50);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(616, 240);
+            groupBox1.Size = new Size(524, 240);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Employee Details Manual Insert and Update";
@@ -113,7 +113,7 @@
             button2.ForeColor = Color.White;
             button2.Location = new Point(418, 37);
             button2.Name = "button2";
-            button2.Size = new Size(102, 23);
+            button2.Size = new Size(95, 23);
             button2.TabIndex = 11;
             button2.Text = "Search";
             button2.UseVisualStyleBackColor = false;
@@ -162,7 +162,7 @@
             txtEmailAddress.BorderStyle = BorderStyle.FixedSingle;
             txtEmailAddress.Location = new Point(136, 96);
             txtEmailAddress.Name = "txtEmailAddress";
-            txtEmailAddress.Size = new Size(452, 23);
+            txtEmailAddress.Size = new Size(328, 23);
             txtEmailAddress.TabIndex = 7;
             // 
             // txtRequestorName
@@ -170,7 +170,7 @@
             txtRequestorName.BorderStyle = BorderStyle.FixedSingle;
             txtRequestorName.Location = new Point(136, 67);
             txtRequestorName.Name = "txtRequestorName";
-            txtRequestorName.Size = new Size(452, 23);
+            txtRequestorName.Size = new Size(328, 23);
             txtRequestorName.TabIndex = 6;
             // 
             // txtEmpID
@@ -230,13 +230,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(236, 240, 241);
+            AutoScroll = true;
+            AutoScrollMinSize = new Size(1500, 0);
+            BackColor = Color.FromArgb(245, 246, 250);
             ClientSize = new Size(748, 373);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             Name = "frmAddEmployee";
             Text = "Add Employee";
             Load += frmAddEmployee_Load;

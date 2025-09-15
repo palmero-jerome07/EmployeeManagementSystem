@@ -58,7 +58,7 @@ namespace EmployeeManagementSystem
             // 
             // dtgMasterData
             // 
-            dtgMasterData.BackgroundColor = Color.FromArgb(236, 240, 241);
+            dtgMasterData.BackgroundColor = Color.FromArgb(245, 246, 250);
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.ActiveCaption;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
