@@ -112,9 +112,9 @@
             btnClose.BackColor = Color.FromArgb(236, 240, 241);
             btnClose.Cursor = Cursors.Hand;
             btnClose.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClose.Location = new Point(700, 12);
+            btnClose.Location = new Point(695, 12);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(34, 27);
+            btnClose.Size = new Size(39, 27);
             btnClose.TabIndex = 2;
             btnClose.Text = "🗙";
             btnClose.UseVisualStyleBackColor = false;
@@ -126,9 +126,9 @@
             btnMaximize.BackColor = Color.FromArgb(236, 240, 241);
             btnMaximize.Cursor = Cursors.Hand;
             btnMaximize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMaximize.Location = new Point(660, 12);
+            btnMaximize.Location = new Point(651, 12);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(34, 27);
+            btnMaximize.Size = new Size(38, 27);
             btnMaximize.TabIndex = 1;
             btnMaximize.Text = "🗖";
             btnMaximize.UseVisualStyleBackColor = false;
@@ -140,9 +140,9 @@
             btnMinimize.BackColor = Color.FromArgb(236, 240, 241);
             btnMinimize.Cursor = Cursors.Hand;
             btnMinimize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMinimize.Location = new Point(620, 12);
+            btnMinimize.Location = new Point(608, 12);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(34, 27);
+            btnMinimize.Size = new Size(37, 27);
             btnMinimize.TabIndex = 0;
             btnMinimize.Text = "━";
             btnMinimize.UseVisualStyleBackColor = false;
