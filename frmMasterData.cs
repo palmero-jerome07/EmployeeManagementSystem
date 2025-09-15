@@ -23,6 +23,8 @@ namespace EmployeeManagementSystem
 
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMasterData));
             pnlChildTitle = new Panel();
             lblMasterData = new Label();
@@ -57,13 +59,30 @@ namespace EmployeeManagementSystem
             // dtgMasterData
             // 
             dtgMasterData.BackgroundColor = Color.FromArgb(236, 240, 241);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgMasterData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
+            dtgMasterData.EnableHeadersVisualStyles = false;
             dtgMasterData.Location = new Point(0, 28);
             dtgMasterData.Name = "dtgMasterData";
+            dtgMasterData.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgMasterData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgMasterData.Size = new Size(748, 345);
             dtgMasterData.TabIndex = 1;
-            dtgMasterData.UseWaitCursor = true;
             dtgMasterData.CellContentClick += dtgMasterData_CellContentClick;
             // 
             // frmMasterData

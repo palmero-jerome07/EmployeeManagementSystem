@@ -94,6 +94,7 @@
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
+            groupBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
             groupBox1.Location = new Point(12, 53);
             groupBox1.Name = "groupBox1";
@@ -101,6 +102,7 @@
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Employee Details Manual Insert and Update";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // button2
             // 
@@ -124,7 +126,7 @@
             btnInsertUpdate.ForeColor = Color.White;
             btnInsertUpdate.Location = new Point(136, 185);
             btnInsertUpdate.Name = "btnInsertUpdate";
-            btnInsertUpdate.Size = new Size(109, 28);
+            btnInsertUpdate.Size = new Size(109, 24);
             btnInsertUpdate.TabIndex = 10;
             btnInsertUpdate.Text = "INSERT/UPDATE";
             btnInsertUpdate.UseVisualStyleBackColor = false;
@@ -133,12 +135,13 @@
             // cmbSection
             // 
             cmbSection.AutoCompleteCustomSource.AddRange(new string[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
+            cmbSection.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbSection.FlatStyle = FlatStyle.Popup;
             cmbSection.FormattingEnabled = true;
-            cmbSection.Items.AddRange(new object[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
+            cmbSection.Items.AddRange(new object[] { "IT Dept.", "CS Dept.", "EMC-DA Dept.", "CPE Dept.", "EE Dept.", "IE Dept.", "ECE Dept." });
             cmbSection.Location = new Point(136, 156);
             cmbSection.Name = "cmbSection";
-            cmbSection.Size = new Size(276, 23);
+            cmbSection.Size = new Size(109, 23);
             cmbSection.TabIndex = 9;
             // 
             // txtLocalNumber
@@ -178,7 +181,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(78, 160);
             label7.Name = "label7";
-            label7.Size = new Size(52, 15);
+            label7.Size = new Size(53, 15);
             label7.TabIndex = 4;
             label7.Text = "Section :";
             // 
