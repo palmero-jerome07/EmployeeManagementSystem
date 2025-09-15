@@ -63,12 +63,11 @@ namespace EmployeeManagementSystem
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //Afrer saving clear all fields
-                txtEmpID.Text = "";
-                txtRequestorName.Text = "";
-                txtEmailAddress.Text = "";
+                txtEmpID.Clear();
+                txtEmailAddress.Clear();
+                txtLocalNumber.Clear();
+                txtRequestorName.Clear();
                 cmbSection.Text = "";
-                txtLocalNumber.Text = "";
-
             }
         }
     }
