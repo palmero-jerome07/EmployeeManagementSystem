@@ -19,7 +19,28 @@ namespace EmployeeManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtEmpID.Text))
+            {
+                MessageBox.Show("Please enter an Employee Number to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            string searchQuery = $"SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '{txtEmpID.Text}'";
+
+            // Use CRUD.RETRIEVESINGLE to check if employee exists
+            bool employeeExists = CRUD.CRUD.RETRIEVESINGLE(searchQuery);
+
+            if (employeeExists)
+            {
+                MessageBox.Show("Employee found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmpID.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Employee not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                // Optionally clear fields or handle as needed
+                txtEmpID.Clear();
+            }
         }
 
         private void frmAddEmployee_Load(object sender, EventArgs e)

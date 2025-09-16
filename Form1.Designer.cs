@@ -35,6 +35,7 @@
             btnMasterData = new Button();
             panel1 = new Panel();
             pnlTitleBar = new Panel();
+            label1 = new Label();
             pictureBox1 = new PictureBox();
             lblHeader = new Label();
             btnClose = new Button();
@@ -63,6 +64,7 @@
             lblFooter.BackColor = Color.Transparent;
             lblFooter.ForeColor = SystemColors.AppWorkspace;
             lblFooter.Name = "lblFooter";
+            lblFooter.Click += lblFooter_Click;
             // 
             // btnAddEmp
             // 
@@ -98,6 +100,7 @@
             resources.ApplyResources(pnlTitleBar, "pnlTitleBar");
             pnlTitleBar.BackColor = Color.FromArgb(39, 58, 74);
             pnlTitleBar.BorderStyle = BorderStyle.FixedSingle;
+            pnlTitleBar.Controls.Add(label1);
             pnlTitleBar.Controls.Add(pictureBox1);
             pnlTitleBar.Controls.Add(lblHeader);
             pnlTitleBar.Controls.Add(btnClose);
@@ -106,9 +109,17 @@
             pnlTitleBar.Name = "pnlTitleBar";
             pnlTitleBar.MouseDown += pnlTitleBar_MouseDown;
             // 
+            // label1
+            // 
+            resources.ApplyResources(label1, "label1");
+            label1.BackColor = Color.Transparent;
+            label1.ForeColor = SystemColors.AppWorkspace;
+            label1.Name = "label1";
+            // 
             // pictureBox1
             // 
             resources.ApplyResources(pictureBox1, "pictureBox1");
+            pictureBox1.Image = properties.Resources.training_program;
             pictureBox1.Name = "pictureBox1";
             pictureBox1.TabStop = false;
             pictureBox1.MouseDown += pictureBox1_Click;
@@ -118,7 +129,7 @@
             resources.ApplyResources(lblHeader, "lblHeader");
             lblHeader.ForeColor = Color.White;
             lblHeader.Name = "lblHeader";
-            lblHeader.MouseDown += lblHeader_Click;
+            lblHeader.MouseDown += LblHeader_Click;
             // 
             // btnClose
             // 
@@ -190,5 +201,6 @@
         private Label lblFooter;
         private Label lblHeader;
         private PictureBox pictureBox1;
+        private Label label1;
     }
 }

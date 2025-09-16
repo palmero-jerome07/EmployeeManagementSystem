@@ -59,5 +59,15 @@ namespace EmployeeManagementSystem.properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap training_program {
+            get {
+                object obj = ResourceManager.GetObject("training-program", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

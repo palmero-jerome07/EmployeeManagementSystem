@@ -124,7 +124,7 @@ namespace EmployeeManagementSystem
             pnlStage.BackColor = Color.FromArgb(255, 255, 255);
         }
 
-        private void lblHeader_Click(object sender, MouseEventArgs e)
+        private void LblHeader_Click(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -140,6 +140,11 @@ namespace EmployeeManagementSystem
                 Common.ReleaseCapture();
                 Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
             }
+        }
+
+        private void lblFooter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
