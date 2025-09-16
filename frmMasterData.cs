@@ -19,6 +19,7 @@ namespace EmployeeManagementSystem
 
         private Panel pnlChildTitle;
         private DataGridView dtgMasterData;
+        private PictureBox pictureBox1;
         private Label lblMasterData;
 
         private void InitializeComponent()
@@ -29,14 +30,17 @@ namespace EmployeeManagementSystem
             pnlChildTitle = new Panel();
             lblMasterData = new Label();
             dtgMasterData = new DataGridView();
+            pictureBox1 = new PictureBox();
             pnlChildTitle.SuspendLayout();
             ((ISupportInitialize)dtgMasterData).BeginInit();
+            ((ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnlChildTitle
             // 
             pnlChildTitle.BackColor = Color.FromArgb(43, 77, 95);
             pnlChildTitle.BorderStyle = BorderStyle.FixedSingle;
+            pnlChildTitle.Controls.Add(pictureBox1);
             pnlChildTitle.Controls.Add(lblMasterData);
             pnlChildTitle.Dock = DockStyle.Top;
             pnlChildTitle.ForeColor = Color.FromArgb(236, 240, 241);
@@ -49,11 +53,11 @@ namespace EmployeeManagementSystem
             // 
             lblMasterData.AutoSize = true;
             lblMasterData.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMasterData.Location = new Point(12, 4);
+            lblMasterData.Location = new Point(41, 4);
             lblMasterData.Name = "lblMasterData";
-            lblMasterData.Size = new Size(118, 20);
+            lblMasterData.Size = new Size(92, 20);
             lblMasterData.TabIndex = 0;
-            lblMasterData.Text = "📊 Master Data";
+            lblMasterData.Text = "Master Data";
             lblMasterData.Click += lblMasterData_Click;
             // 
             // dtgMasterData
@@ -85,6 +89,16 @@ namespace EmployeeManagementSystem
             dtgMasterData.TabIndex = 1;
             dtgMasterData.CellContentClick += dtgMasterData_CellContentClick;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = properties.Resources.folder_24px;
+            pictureBox1.Location = new Point(11, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(24, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
             // frmMasterData
             // 
             BackColor = SystemColors.ControlLight;
@@ -99,6 +113,7 @@ namespace EmployeeManagementSystem
             pnlChildTitle.ResumeLayout(false);
             pnlChildTitle.PerformLayout();
             ((ISupportInitialize)dtgMasterData).EndInit();
+            ((ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

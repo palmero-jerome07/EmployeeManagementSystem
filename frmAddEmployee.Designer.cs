@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
             panel1 = new Panel();
             label1 = new Label();
@@ -45,13 +46,23 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            TTempNum = new ToolTip(components);
+            TTreqName = new ToolTip(components);
+            TTemailAdd = new ToolTip(components);
+            TTlocalNum = new ToolTip(components);
+            TTsection = new ToolTip(components);
+            TTinsertUpdate = new ToolTip(components);
+            TTsearch = new ToolTip(components);
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(43, 77, 95);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.FromArgb(236, 240, 241);
@@ -65,11 +76,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 4);
+            label1.Location = new Point(41, 4);
             label1.Name = "label1";
-            label1.Size = new Size(134, 20);
+            label1.Size = new Size(108, 20);
             label1.TabIndex = 0;
-            label1.Text = "➕ Add Employee";
+            label1.Text = "Add Employee";
             // 
             // label2
             // 
@@ -116,6 +127,7 @@
             button2.Size = new Size(95, 23);
             button2.TabIndex = 11;
             button2.Text = "Search";
+            TTsearch.SetToolTip(button2, "Search employee");
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             button2.MouseEnter += button2_MouseEnter;
@@ -132,6 +144,7 @@
             btnInsertUpdate.Size = new Size(109, 24);
             btnInsertUpdate.TabIndex = 10;
             btnInsertUpdate.Text = "INSERT/UPDATE";
+            TTinsertUpdate.SetToolTip(btnInsertUpdate, "Insert or update employee");
             btnInsertUpdate.UseVisualStyleBackColor = false;
             btnInsertUpdate.Click += btnInsertUpdate_Click;
             btnInsertUpdate.MouseEnter += btnInsertUpdate_MouseEnter;
@@ -148,6 +161,7 @@
             cmbSection.Name = "cmbSection";
             cmbSection.Size = new Size(109, 23);
             cmbSection.TabIndex = 9;
+            TTsection.SetToolTip(cmbSection, "Select department");
             // 
             // txtLocalNumber
             // 
@@ -156,6 +170,7 @@
             txtLocalNumber.Name = "txtLocalNumber";
             txtLocalNumber.Size = new Size(276, 23);
             txtLocalNumber.TabIndex = 8;
+            TTlocalNum.SetToolTip(txtLocalNumber, "Input local number");
             // 
             // txtEmailAddress
             // 
@@ -164,6 +179,7 @@
             txtEmailAddress.Name = "txtEmailAddress";
             txtEmailAddress.Size = new Size(328, 23);
             txtEmailAddress.TabIndex = 7;
+            TTemailAdd.SetToolTip(txtEmailAddress, "Input email address");
             // 
             // txtRequestorName
             // 
@@ -172,14 +188,17 @@
             txtRequestorName.Name = "txtRequestorName";
             txtRequestorName.Size = new Size(328, 23);
             txtRequestorName.TabIndex = 6;
+            TTreqName.SetToolTip(txtRequestorName, "Input requestor name");
             // 
             // txtEmpID
             // 
+            txtEmpID.AutoCompleteMode = AutoCompleteMode.Suggest;
             txtEmpID.BorderStyle = BorderStyle.FixedSingle;
             txtEmpID.Location = new Point(136, 37);
             txtEmpID.Name = "txtEmpID";
             txtEmpID.Size = new Size(276, 23);
             txtEmpID.TabIndex = 5;
+            TTempNum.SetToolTip(txtEmpID, "Input Employee Number");
             // 
             // label7
             // 
@@ -226,6 +245,16 @@
             label3.TabIndex = 0;
             label3.Text = "Employee Number :";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = properties.Resources.add_user_24px;
+            pictureBox1.Location = new Point(11, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(24, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
             // frmAddEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -247,6 +276,7 @@
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -269,5 +299,13 @@
         private TextBox txtEmailAddress;
         private TextBox txtRequestorName;
         private TextBox txtEmpID;
+        private ToolTip TTempNum;
+        private ToolTip TTreqName;
+        private ToolTip TTemailAdd;
+        private ToolTip TTlocalNum;
+        private ToolTip TTsection;
+        private ToolTip TTinsertUpdate;
+        private ToolTip TTsearch;
+        private PictureBox pictureBox1;
     }
 }
