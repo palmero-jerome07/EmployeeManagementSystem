@@ -208,7 +208,7 @@
             // btnClose
             // 
             resources.ApplyResources(btnClose, "btnClose");
-            btnClose.BackColor = Color.FromArgb(236, 240, 241);
+            btnClose.BackColor = Color.Transparent;
             btnClose.Cursor = Cursors.Hand;
             btnClose.FlatAppearance.BorderSize = 0;
             btnClose.Name = "btnClose";
@@ -227,8 +227,9 @@
             // btnMaximize
             // 
             resources.ApplyResources(btnMaximize, "btnMaximize");
-            btnMaximize.BackColor = Color.FromArgb(236, 240, 241);
+            btnMaximize.BackColor = Color.Transparent;
             btnMaximize.Cursor = Cursors.Hand;
+            btnMaximize.FlatAppearance.BorderSize = 0;
             btnMaximize.Name = "btnMaximize";
             TTminimize.SetToolTip(btnMaximize, resources.GetString("btnMaximize.ToolTip"));
             TTmaximize.SetToolTip(btnMaximize, resources.GetString("btnMaximize.ToolTip1"));
@@ -239,12 +240,15 @@
             TTinsertUpdateEmployee.SetToolTip(btnMaximize, resources.GetString("btnMaximize.ToolTip6"));
             btnMaximize.UseVisualStyleBackColor = false;
             btnMaximize.Click += btnMaximize_Click;
+            btnMaximize.MouseEnter += btnMaximize_MouseEnter;
+            btnMaximize.MouseLeave += btnMaximize_MouseLeave;
             // 
             // btnMinimize
             // 
             resources.ApplyResources(btnMinimize, "btnMinimize");
-            btnMinimize.BackColor = Color.FromArgb(236, 240, 241);
+            btnMinimize.BackColor = Color.Transparent;
             btnMinimize.Cursor = Cursors.Hand;
+            btnMinimize.FlatAppearance.BorderSize = 0;
             btnMinimize.Name = "btnMinimize";
             TTminimize.SetToolTip(btnMinimize, resources.GetString("btnMinimize.ToolTip"));
             TTmaximize.SetToolTip(btnMinimize, resources.GetString("btnMinimize.ToolTip1"));
@@ -255,6 +259,8 @@
             TTinsertUpdateEmployee.SetToolTip(btnMinimize, resources.GetString("btnMinimize.ToolTip6"));
             btnMinimize.UseVisualStyleBackColor = false;
             btnMinimize.Click += btnMinimize_Click;
+            btnMinimize.MouseEnter += btnMinimize_MouseEnter;
+            btnMinimize.MouseLeave += btnMinimize_MouseLeave;
             // 
             // pnlStage
             // 
