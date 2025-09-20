@@ -20,20 +20,24 @@ namespace EmployeeManagementSystem
         private Panel pnlChildTitle;
         private DataGridView dtgMasterData;
         private PictureBox pictureBox1;
+        private Button btnEditData;
+        private Label lblTransactionNo;
         private Label lblMasterData;
 
         private void InitializeComponent()
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMasterData));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMasterData));
             pnlChildTitle = new Panel();
+            pictureBox1 = new PictureBox();
             lblMasterData = new Label();
             dtgMasterData = new DataGridView();
-            pictureBox1 = new PictureBox();
+            btnEditData = new Button();
+            lblTransactionNo = new Label();
             pnlChildTitle.SuspendLayout();
-            ((ISupportInitialize)dtgMasterData).BeginInit();
             ((ISupportInitialize)pictureBox1).BeginInit();
+            ((ISupportInitialize)dtgMasterData).BeginInit();
             SuspendLayout();
             // 
             // pnlChildTitle
@@ -48,6 +52,16 @@ namespace EmployeeManagementSystem
             pnlChildTitle.Name = "pnlChildTitle";
             pnlChildTitle.Size = new Size(748, 28);
             pnlChildTitle.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(11, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(24, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // lblMasterData
             // 
@@ -73,10 +87,10 @@ namespace EmployeeManagementSystem
             dtgMasterData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
+            dtgMasterData.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgMasterData.EnableHeadersVisualStyles = false;
             dtgMasterData.Location = new Point(0, 28);
             dtgMasterData.Name = "dtgMasterData";
-            dtgMasterData.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -85,36 +99,57 @@ namespace EmployeeManagementSystem
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dtgMasterData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dtgMasterData.Size = new Size(748, 345);
+            dtgMasterData.Size = new Size(748, 295);
             dtgMasterData.TabIndex = 1;
+            dtgMasterData.CellClick += dtgMasterData_CellClick;
             dtgMasterData.CellContentClick += dtgMasterData_CellContentClick;
+            dtgMasterData.RowHeaderMouseClick += dtgMasterData_RowHeaderMouseClick;
             // 
-            // pictureBox1
+            // btnEditData
             // 
-            pictureBox1.Image = properties.Resources.folder_24px;
-            pictureBox1.Location = new Point(11, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(24, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            btnEditData.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEditData.BackColor = Color.FromArgb(60, 173, 150);
+            btnEditData.FlatStyle = FlatStyle.Popup;
+            btnEditData.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEditData.Location = new Point(654, 335);
+            btnEditData.Name = "btnEditData";
+            btnEditData.Size = new Size(75, 23);
+            btnEditData.TabIndex = 4;
+            btnEditData.Text = "Edit Data";
+            btnEditData.UseVisualStyleBackColor = false;
+            btnEditData.Click += btnEditData_Click;
+            // 
+            // lblTransactionNo
+            // 
+            lblTransactionNo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            lblTransactionNo.AutoSize = true;
+            lblTransactionNo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTransactionNo.Location = new Point(12, 341);
+            lblTransactionNo.Name = "lblTransactionNo";
+            lblTransactionNo.Size = new Size(173, 17);
+            lblTransactionNo.TabIndex = 5;
+            lblTransactionNo.Text = "<TRANSACTION NUMBER>";
             // 
             // frmMasterData
             // 
-            BackColor = SystemColors.ControlLight;
+            BackColor = SystemColors.Window;
             ClientSize = new Size(748, 373);
+            Controls.Add(lblTransactionNo);
+            Controls.Add(btnEditData);
             Controls.Add(dtgMasterData);
             Controls.Add(pnlChildTitle);
             ForeColor = Color.Black;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMasterData";
+            Padding = new Padding(0, 0, 0, 50);
             Text = "Master Data";
             Load += frmMasterData_Load;
             pnlChildTitle.ResumeLayout(false);
             pnlChildTitle.PerformLayout();
-            ((ISupportInitialize)dtgMasterData).EndInit();
             ((ISupportInitialize)pictureBox1).EndInit();
+            ((ISupportInitialize)dtgMasterData).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         private void lblMasterData_Click(object sender, EventArgs e)
@@ -122,7 +157,7 @@ namespace EmployeeManagementSystem
 
         }
 
-        private void frmMasterData_Load(object sender, EventArgs e)
+        public void frmMasterData_Load(object sender, EventArgs e)
         {
             string select_tblrequestorlist = "SELECT * FROM tblEmployeeData ORDER BY EmployeeNumber DESC";
             CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
@@ -131,6 +166,33 @@ namespace EmployeeManagementSystem
         private void dtgMasterData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dtgMasterData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
+        }
+
+        public static string selectedTransaction, RequestorName, EmailAddress, Section, LocalNumber, EmployeeNumber;
+
+        private void btnEditData_Click(object sender, EventArgs e)
+        {
+            frmAddEmployee openForm = new frmAddEmployee();
+            openForm.ShowDialog();
+
+            string select_tblrequestorlist = "SELECT * FROM tblEmployeeData ORDER BY EmployeeNumber DESC";
+            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
+        }
+
+
+        private void dtgMasterData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {   lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+            selectedTransaction = lblTransactionNo.Text;
+            EmployeeNumber = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
+            RequestorName = dtgMasterData.Rows[e.RowIndex].Cells["RequestorName"].Value.ToString();
+            EmailAddress = dtgMasterData.Rows[e.RowIndex].Cells["RequestorEmail"].Value.ToString();
+            Section = dtgMasterData.Rows[e.RowIndex].Cells["Section"].Value.ToString();
+            LocalNumber = dtgMasterData.Rows[e.RowIndex].Cells["LocalNumber"].Value.ToString();
         }
     }
 }
