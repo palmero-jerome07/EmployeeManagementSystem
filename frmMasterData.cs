@@ -87,7 +87,7 @@ namespace EmployeeManagementSystem
             dtgMasterData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
-            dtgMasterData.EditMode = DataGridViewEditMode.EditOnF2;
+            dtgMasterData.EditMode = DataGridViewEditMode.EditProgrammatically;
             dtgMasterData.EnableHeadersVisualStyles = false;
             dtgMasterData.Location = new Point(0, 28);
             dtgMasterData.Name = "dtgMasterData";
@@ -173,7 +173,7 @@ namespace EmployeeManagementSystem
             lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
         }
 
-        public static string selectedTransaction, RequestorName, EmailAddress, Section, LocalNumber;
+        public static string selectedTransaction, RequestorName, EmailAddress, Section, LocalNumber, EmployeeNumber;
 
         private void btnEditData_Click(object sender, EventArgs e)
         {
@@ -186,9 +186,9 @@ namespace EmployeeManagementSystem
 
 
         private void dtgMasterData_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
+        {   lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString();
             selectedTransaction = lblTransactionNo.Text;
+            EmployeeNumber = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
             RequestorName = dtgMasterData.Rows[e.RowIndex].Cells["RequestorName"].Value.ToString();
             EmailAddress = dtgMasterData.Rows[e.RowIndex].Cells["RequestorEmail"].Value.ToString();
             Section = dtgMasterData.Rows[e.RowIndex].Cells["Section"].Value.ToString();

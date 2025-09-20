@@ -1,3 +1,6 @@
+using static System.Collections.Specialized.BitVector32;
+using System.Net.Mail;
+
 namespace EmployeeManagementSystem
 {
     public partial class frmMotherForm : Form
@@ -78,7 +81,14 @@ namespace EmployeeManagementSystem
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
+            frmMasterData.selectedTransaction = "";
+            frmMasterData.RequestorName = "";
+            frmMasterData.EmailAddress = "";
+            frmMasterData.Section = "";
+            frmMasterData.LocalNumber = "";
             OpenChildForm(new frmAddEmployee());
+
+
         }
 
         private void btnMasterData_MouseEnter(object sender, EventArgs e)

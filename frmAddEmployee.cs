@@ -74,7 +74,7 @@ namespace EmployeeManagementSystem
 
             bool dtg_addrequestor = false;
             string EMS_data = string.Empty;
-            EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '" + txtEmpID.Text + "'";
+            EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [ID] = '" + frmMasterData.selectedTransaction + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
 
             if (dtg_addrequestor == true)
@@ -141,7 +141,7 @@ namespace EmployeeManagementSystem
 
         private void button2_MouseEnter(object sender, EventArgs e)
         {
-            button2.BackColor = Color.FromArgb(14, 102, 85);
+            btnSearch.BackColor = Color.FromArgb(14, 102, 85);
         }
 
         private void button2_MouseLeave(object sender, EventArgs e)
@@ -155,10 +155,11 @@ namespace EmployeeManagementSystem
 
             if(result == DialogResult.Yes)
             {
-                string delete_requestor = "DELETE FROM [tblEmployeeData] WHERE EmployeeNumber = '" + frmMasterData.selectedTransaction + "'";
+                string delete_requestor = "DELETE FROM [tblEmployeeData] WHERE ID = '" + frmMasterData.selectedTransaction + "'";
                 CRUD.CRUD.CUD(delete_requestor);
                 MessageBox.Show("Data has been deleted.", "Deleted.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                this.Close();
+
             } else
             {
                 return;

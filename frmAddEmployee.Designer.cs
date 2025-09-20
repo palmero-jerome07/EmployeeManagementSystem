@@ -32,11 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            label1 = new Label();
+            lblHeader = new Label();
             label2 = new Label();
-            groupBox1 = new GroupBox();
+            gboxInsertUpdate = new GroupBox();
             btnDelete = new Button();
-            button2 = new Button();
+            btnSearch = new Button();
             btnInsertUpdate = new Button();
             cmbSection = new ComboBox();
             txtLocalNumber = new TextBox();
@@ -57,14 +57,14 @@
             TTsearch = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBox1.SuspendLayout();
+            gboxInsertUpdate.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(43, 77, 95);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblHeader);
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.FromArgb(236, 240, 241);
             panel1.Location = new Point(0, 0);
@@ -83,15 +83,15 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblHeader
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(41, 4);
-            label1.Name = "label1";
-            label1.Size = new Size(108, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Add Employee";
+            lblHeader.AutoSize = true;
+            lblHeader.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHeader.Location = new Point(41, 4);
+            lblHeader.Name = "lblHeader";
+            lblHeader.Size = new Size(108, 20);
+            lblHeader.TabIndex = 0;
+            lblHeader.Text = "Add Employee";
             // 
             // label2
             // 
@@ -102,31 +102,31 @@
             label2.Size = new Size(0, 17);
             label2.TabIndex = 1;
             // 
-            // groupBox1
+            // gboxInsertUpdate
             // 
-            groupBox1.BackColor = Color.FromArgb(236, 240, 250);
-            groupBox1.Controls.Add(btnDelete);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(btnInsertUpdate);
-            groupBox1.Controls.Add(cmbSection);
-            groupBox1.Controls.Add(txtLocalNumber);
-            groupBox1.Controls.Add(txtEmailAddress);
-            groupBox1.Controls.Add(txtRequestorName);
-            groupBox1.Controls.Add(txtEmpID);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.ForeColor = SystemColors.ActiveCaptionText;
-            groupBox1.Location = new Point(11, 50);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(524, 240);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Employee Details Manual Insert and Update";
-            groupBox1.Enter += groupBox1_Enter;
+            gboxInsertUpdate.BackColor = Color.FromArgb(236, 240, 250);
+            gboxInsertUpdate.Controls.Add(btnDelete);
+            gboxInsertUpdate.Controls.Add(btnSearch);
+            gboxInsertUpdate.Controls.Add(btnInsertUpdate);
+            gboxInsertUpdate.Controls.Add(cmbSection);
+            gboxInsertUpdate.Controls.Add(txtLocalNumber);
+            gboxInsertUpdate.Controls.Add(txtEmailAddress);
+            gboxInsertUpdate.Controls.Add(txtRequestorName);
+            gboxInsertUpdate.Controls.Add(txtEmpID);
+            gboxInsertUpdate.Controls.Add(label7);
+            gboxInsertUpdate.Controls.Add(label6);
+            gboxInsertUpdate.Controls.Add(label5);
+            gboxInsertUpdate.Controls.Add(label4);
+            gboxInsertUpdate.Controls.Add(label3);
+            gboxInsertUpdate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gboxInsertUpdate.ForeColor = SystemColors.ActiveCaptionText;
+            gboxInsertUpdate.Location = new Point(11, 50);
+            gboxInsertUpdate.Name = "gboxInsertUpdate";
+            gboxInsertUpdate.Size = new Size(524, 240);
+            gboxInsertUpdate.TabIndex = 3;
+            gboxInsertUpdate.TabStop = false;
+            gboxInsertUpdate.Text = "Employee Details Manual Insert and Update";
+            gboxInsertUpdate.Enter += groupBox1_Enter;
             // 
             // btnDelete
             // 
@@ -143,22 +143,22 @@
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += button1_Click;
             // 
-            // button2
+            // btnSearch
             // 
-            button2.BackColor = Color.FromArgb(60, 173, 150);
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(418, 37);
-            button2.Name = "button2";
-            button2.Size = new Size(95, 23);
-            button2.TabIndex = 11;
-            button2.Text = "Search";
-            TTsearch.SetToolTip(button2, "Search employee");
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            button2.MouseEnter += button2_MouseEnter;
-            button2.MouseLeave += button2_MouseLeave;
+            btnSearch.BackColor = Color.FromArgb(60, 173, 150);
+            btnSearch.FlatStyle = FlatStyle.Popup;
+            btnSearch.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(418, 37);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(95, 23);
+            btnSearch.TabIndex = 11;
+            btnSearch.Text = "Search";
+            TTsearch.SetToolTip(btnSearch, "Search employee");
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += button2_Click;
+            btnSearch.MouseEnter += button2_MouseEnter;
+            btnSearch.MouseLeave += button2_MouseLeave;
             // 
             // btnInsertUpdate
             // 
@@ -194,6 +194,7 @@
             // 
             txtLocalNumber.BorderStyle = BorderStyle.FixedSingle;
             txtLocalNumber.Location = new Point(136, 125);
+            txtLocalNumber.MaxLength = 4;
             txtLocalNumber.Name = "txtLocalNumber";
             txtLocalNumber.Size = new Size(276, 23);
             txtLocalNumber.TabIndex = 8;
@@ -280,7 +281,7 @@
             AutoScrollMinSize = new Size(1500, 0);
             BackColor = Color.FromArgb(245, 246, 250);
             ClientSize = new Size(748, 373);
-            Controls.Add(groupBox1);
+            Controls.Add(gboxInsertUpdate);
             Controls.Add(label2);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
@@ -292,8 +293,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            gboxInsertUpdate.ResumeLayout(false);
+            gboxInsertUpdate.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -301,15 +302,15 @@
         #endregion
 
         private Panel panel1;
-        private Label label1;
+        private Label lblHeader;
         private Label label2;
-        private GroupBox groupBox1;
+        private GroupBox gboxInsertUpdate;
         private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
-        private Button button2;
+        private Button btnSearch;
         private Button btnInsertUpdate;
         private ComboBox cmbSection;
         private TextBox txtLocalNumber;
