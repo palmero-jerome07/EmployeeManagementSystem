@@ -184,7 +184,10 @@
     <value>True</value>
   </data>
   <data name="btnClose.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+    <value>Flat</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>709, -1</value>
   </data>
   <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 27</value>
@@ -193,7 +196,10 @@
     <value>Close</value>
   </data>
   <data name="btnMaximize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+    <value>Flat</value>
+  </data>
+  <data name="btnMaximize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>670, -1</value>
   </data>
   <data name="btnMaximize.ToolTip" xml:space="preserve">
     <value />
@@ -202,7 +208,10 @@
     <value>Maximize</value>
   </data>
   <data name="btnMinimize.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+    <value>Flat</value>
+  </data>
+  <data name="btnMinimize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>633, -1</value>
   </data>
   <data name="btnMinimize.ToolTip" xml:space="preserve">
     <value>Minimize</value>

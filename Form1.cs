@@ -110,7 +110,7 @@ namespace EmployeeManagementSystem
 
         private void btnClose_MouseLeave(object sender, EventArgs e)
         {
-            btnClose.BackColor = Color.FromArgb(236, 240, 241);
+            btnClose.BackColor = Color.Transparent;
             btnClose.ForeColor = Color.Black;
         }
 
@@ -147,5 +147,24 @@ namespace EmployeeManagementSystem
 
         }
 
+        private void btnMaximize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMaximize.BackColor = Color.Silver;
+        }
+
+        private void btnMaximize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMaximize.BackColor = Color.Transparent;
+        }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Silver;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Transparent;
+        }
     }
 }
