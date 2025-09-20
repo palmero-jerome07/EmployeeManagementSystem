@@ -94,7 +94,6 @@
             btnAddEmp.BackColor = Color.FromArgb(60, 173, 150);
             btnAddEmp.Cursor = Cursors.Hand;
             btnAddEmp.ForeColor = Color.White;
-            btnAddEmp.Image = properties.Resources.user;
             btnAddEmp.Name = "btnAddEmp";
             TTminimize.SetToolTip(btnAddEmp, resources.GetString("btnAddEmp.ToolTip"));
             TTmaximize.SetToolTip(btnAddEmp, resources.GetString("btnAddEmp.ToolTip1"));
@@ -114,7 +113,6 @@
             btnMasterData.BackColor = Color.FromArgb(60, 173, 150);
             btnMasterData.Cursor = Cursors.Hand;
             btnMasterData.ForeColor = Color.White;
-            btnMasterData.Image = properties.Resources.folder_data;
             btnMasterData.Name = "btnMasterData";
             TTminimize.SetToolTip(btnMasterData, resources.GetString("btnMasterData.ToolTip"));
             TTmaximize.SetToolTip(btnMasterData, resources.GetString("btnMasterData.ToolTip1"));
@@ -179,7 +177,6 @@
             // pictureBox1
             // 
             resources.ApplyResources(pictureBox1, "pictureBox1");
-            pictureBox1.Image = properties.Resources.training_program;
             pictureBox1.Name = "pictureBox1";
             pictureBox1.TabStop = false;
             TTclose.SetToolTip(pictureBox1, resources.GetString("pictureBox1.ToolTip"));

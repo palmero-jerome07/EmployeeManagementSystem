@@ -59,7 +59,6 @@ namespace EmployeeManagementSystem
         {
             if (currentChildForm != null)
             {
-                //open only form
                 currentChildForm.Close();
             }
             currentChildForm = childform;

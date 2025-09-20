@@ -31,9 +31,11 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            btnDelete = new Button();
             button2 = new Button();
             btnInsertUpdate = new Button();
             cmbSection = new ComboBox();
@@ -53,10 +55,9 @@
             TTsection = new ToolTip(components);
             TTinsertUpdate = new ToolTip(components);
             TTsearch = new ToolTip(components);
-            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
-            groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -71,6 +72,16 @@
             panel1.Size = new Size(1500, 28);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(11, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(24, 24);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -94,6 +105,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(236, 240, 250);
+            groupBox1.Controls.Add(btnDelete);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(btnInsertUpdate);
             groupBox1.Controls.Add(cmbSection);
@@ -115,6 +127,21 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Employee Details Manual Insert and Update";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.FromArgb(60, 173, 150);
+            btnDelete.FlatStyle = FlatStyle.Popup;
+            btnDelete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(251, 185);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(60, 24);
+            btnDelete.TabIndex = 12;
+            btnDelete.Text = "DELETE";
+            TTinsertUpdate.SetToolTip(btnDelete, "Insert or update employee");
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += button1_Click;
             // 
             // button2
             // 
@@ -153,7 +180,7 @@
             // cmbSection
             // 
             cmbSection.AutoCompleteCustomSource.AddRange(new string[] { "IT", "CS", "EMC-DA", "CPE", "EE", "IE", "ECE" });
-            cmbSection.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbSection.DropDownStyle = ComboBoxStyle.Simple;
             cmbSection.FlatStyle = FlatStyle.Popup;
             cmbSection.FormattingEnabled = true;
             cmbSection.Items.AddRange(new object[] { "IT Dept.", "CS Dept.", "EMC-DA Dept.", "CPE Dept.", "EE Dept.", "IE Dept.", "ECE Dept." });
@@ -245,16 +272,6 @@
             label3.TabIndex = 0;
             label3.Text = "Employee Number :";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = properties.Resources.add_user_24px;
-            pictureBox1.Location = new Point(11, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(24, 24);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
             // frmAddEmployee
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -274,9 +291,9 @@
             Load += frmAddEmployee_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,5 +324,6 @@
         private ToolTip TTinsertUpdate;
         private ToolTip TTsearch;
         private PictureBox pictureBox1;
+        private Button btnDelete;
     }
 }
