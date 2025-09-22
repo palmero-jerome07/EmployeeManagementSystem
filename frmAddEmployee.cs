@@ -90,7 +90,7 @@ namespace EmployeeManagementSystem
 
                 if (result == DialogResult.Yes)
                 {
-                    if(!this.txtEmailAddress.Text.Contains("@firstasia.edu.ph"))
+                    if(!txtEmailAddress.Text.EndsWith("@firstasia.edu.ph"))
                     {
                         MessageBox.Show("Please enter a valid First Asia email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
