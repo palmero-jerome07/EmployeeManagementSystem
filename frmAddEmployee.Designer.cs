@@ -280,7 +280,7 @@
             AutoScroll = true;
             AutoScrollMinSize = new Size(1500, 0);
             BackColor = Color.FromArgb(245, 246, 250);
-            ClientSize = new Size(748, 373);
+            ClientSize = new Size(562, 320);
             Controls.Add(gboxInsertUpdate);
             Controls.Add(label2);
             Controls.Add(panel1);

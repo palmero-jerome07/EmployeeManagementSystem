@@ -86,6 +86,7 @@ namespace EmployeeManagementSystem
             frmMasterData.EmailAddress = "";
             frmMasterData.Section = "";
             frmMasterData.LocalNumber = "";
+            frmMasterData.EmployeeNumber = "";
             OpenChildForm(new frmAddEmployee());
 
 

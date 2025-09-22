@@ -170,7 +170,7 @@ namespace EmployeeManagementSystem
 
         private void dtgMasterData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
+            lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString();
         }
 
         public static string selectedTransaction, RequestorName, EmailAddress, Section, LocalNumber, EmployeeNumber;
@@ -180,6 +180,11 @@ namespace EmployeeManagementSystem
             frmAddEmployee openForm = new frmAddEmployee();
             openForm.ShowDialog();
 
+            this.refreshData();
+        }
+
+        private void refreshData()
+        {
             string select_tblrequestorlist = "SELECT * FROM tblEmployeeData ORDER BY EmployeeNumber DESC";
             CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
         }
