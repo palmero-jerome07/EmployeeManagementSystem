@@ -81,7 +81,7 @@ namespace EmployeeManagementSystem
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
-            frmMasterData.selectedTransaction = "";
+            frmMasterData.selectedTransaction = "0";
             frmMasterData.RequestorName = "";
             frmMasterData.EmailAddress = "";
             frmMasterData.Section = "";

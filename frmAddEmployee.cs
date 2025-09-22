@@ -84,7 +84,6 @@ namespace EmployeeManagementSystem
 
             bool dtg_addrequestor = false;
             string EMS_data = string.Empty;
-            frmMasterData.selectedTransaction = "0";
             EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [ID] = " + frmMasterData.selectedTransaction + " OR [EmployeeNumber] = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
 
@@ -99,12 +98,12 @@ namespace EmployeeManagementSystem
                     {
                         MessageBox.Show("Please enter a valid First Asia email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
-                    } else if (txtLocalNumber.Text.Length == 4 || !txtLocalNumber.Text.All(char.IsDigit))
+                    } else if (txtLocalNumber.Text.Length != 4 || !txtLocalNumber.Text.All(char.IsDigit))
                     {
                         MessageBox.Show("Please enter a valid 4-digit local number.", "Invalid Local Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-                        string update_requestor = "UPDATE [tblEmployeeData] SET [RequestorName] = '" + txtRequestorName.Text + "', [RequestorEmail] = '" + txtEmailAddress.Text + "', [Section] = '" + cmbSection.Text + "', [LocalNumber] = '" + txtLocalNumber.Text + "' , [EmployeeNumber] = '" + txtEmpID.Text + "' WHERE [ID] = " + int.Parse(frmMasterData.selectedTransaction) + "";
+                    string update_requestor = "UPDATE [tblEmployeeData] SET [RequestorName] = '" + txtRequestorName.Text + "', [RequestorEmail] = '" + txtEmailAddress.Text + "', [Section] = '" + cmbSection.Text + "', [LocalNumber] = '" + txtLocalNumber.Text + "' , [EmployeeNumber] = '" + txtEmpID.Text + "' WHERE [ID] = " + frmMasterData.selectedTransaction + "";
                     CRUD.CRUD.CUD(update_requestor);
                     MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
