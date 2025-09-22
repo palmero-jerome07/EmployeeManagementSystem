@@ -22,10 +22,14 @@ namespace EmployeeManagementSystem
         private PictureBox pictureBox1;
         private Button btnEditData;
         private Label lblTransactionNo;
+        private ToolTip TTeditData;
+        private IContainer components;
+        private ToolTip TTtransactionNum;
         private Label lblMasterData;
 
         private void InitializeComponent()
         {
+            components = new Container();
             ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMasterData));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -35,6 +39,8 @@ namespace EmployeeManagementSystem
             dtgMasterData = new DataGridView();
             btnEditData = new Button();
             lblTransactionNo = new Label();
+            TTeditData = new ToolTip(components);
+            TTtransactionNum = new ToolTip(components);
             pnlChildTitle.SuspendLayout();
             ((ISupportInitialize)pictureBox1).BeginInit();
             ((ISupportInitialize)dtgMasterData).BeginInit();
@@ -109,26 +115,30 @@ namespace EmployeeManagementSystem
             // 
             btnEditData.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEditData.BackColor = Color.FromArgb(60, 173, 150);
-            btnEditData.FlatStyle = FlatStyle.Popup;
-            btnEditData.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEditData.Location = new Point(654, 335);
+            btnEditData.FlatStyle = FlatStyle.Flat;
+            btnEditData.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEditData.Location = new Point(659, 339);
             btnEditData.Name = "btnEditData";
             btnEditData.Size = new Size(75, 23);
             btnEditData.TabIndex = 4;
             btnEditData.Text = "Edit Data";
+            TTeditData.SetToolTip(btnEditData, "Edit Data Row");
             btnEditData.UseVisualStyleBackColor = false;
             btnEditData.Click += btnEditData_Click;
+            btnEditData.MouseEnter += btnEditData_MouseEnter;
+            btnEditData.MouseLeave += btnEditData_MouseLeave;
             // 
             // lblTransactionNo
             // 
             lblTransactionNo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblTransactionNo.AutoSize = true;
             lblTransactionNo.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTransactionNo.Location = new Point(12, 341);
+            lblTransactionNo.Location = new Point(12, 339);
             lblTransactionNo.Name = "lblTransactionNo";
             lblTransactionNo.Size = new Size(173, 17);
             lblTransactionNo.TabIndex = 5;
             lblTransactionNo.Text = "<TRANSACTION NUMBER>";
+            TTtransactionNum.SetToolTip(lblTransactionNo, "Employee unique ID");
             // 
             // frmMasterData
             // 
@@ -191,13 +201,26 @@ namespace EmployeeManagementSystem
 
 
         private void dtgMasterData_CellClick(object sender, DataGridViewCellEventArgs e)
-        {   lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
+
+            lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString();
             selectedTransaction = lblTransactionNo.Text;
             EmployeeNumber = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
             RequestorName = dtgMasterData.Rows[e.RowIndex].Cells["RequestorName"].Value.ToString();
             EmailAddress = dtgMasterData.Rows[e.RowIndex].Cells["RequestorEmail"].Value.ToString();
             Section = dtgMasterData.Rows[e.RowIndex].Cells["Section"].Value.ToString();
             LocalNumber = dtgMasterData.Rows[e.RowIndex].Cells["LocalNumber"].Value.ToString();
+        }
+
+        private void btnEditData_MouseEnter(object sender, EventArgs e)
+        {
+            btnEditData.BackColor = Color.FromArgb(14, 102, 85);
+        }
+
+        private void btnEditData_MouseLeave(object sender, EventArgs e)
+        {
+            btnEditData.BackColor = Color.FromArgb(26, 188, 156);
         }
     }
 }

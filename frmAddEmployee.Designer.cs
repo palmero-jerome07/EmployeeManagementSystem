@@ -55,6 +55,7 @@
             TTsection = new ToolTip(components);
             TTinsertUpdate = new ToolTip(components);
             TTsearch = new ToolTip(components);
+            toolTip1 = new ToolTip(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             gboxInsertUpdate.SuspendLayout();
@@ -142,6 +143,8 @@
             TTinsertUpdate.SetToolTip(btnDelete, "Insert or update employee");
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += button1_Click;
+            btnDelete.MouseEnter += btnDelete_MouseEnter;
+            btnDelete.MouseLeave += btnDelete_MouseLeave;
             // 
             // btnSearch
             // 
@@ -196,7 +199,7 @@
             txtLocalNumber.Location = new Point(136, 125);
             txtLocalNumber.MaxLength = 4;
             txtLocalNumber.Name = "txtLocalNumber";
-            txtLocalNumber.Size = new Size(276, 23);
+            txtLocalNumber.Size = new Size(109, 23);
             txtLocalNumber.TabIndex = 8;
             TTlocalNum.SetToolTip(txtLocalNumber, "Input local number");
             // 
@@ -326,5 +329,6 @@
         private ToolTip TTsearch;
         private PictureBox pictureBox1;
         private Button btnDelete;
+        private ToolTip toolTip1;
     }
 }

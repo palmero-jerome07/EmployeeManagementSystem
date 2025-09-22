@@ -121,15 +121,21 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        gwAAAIMBYu+7WgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFcSURBVEhLYxjG
-        YFXyfiD+j4mTTjGsCmWGqqIArEp+j2k4FK9MiYGqogDgs2BV8n2Glcm+DHOz4him5pXhxoVuUNMg4P8R
-        671A/A6E3x+2/ffukN1/EN691/U/IzaLZuT9Z+gox427yv5BjYYAoMHfgfg/NhywKZx0C0AYGQANwmnB
-        9QNO/z02RvwvW+ePwEtC/5fNjkLBVpMyUC34n++yH4jfgXGp8z8g/g/GXY5YLfq/xBgv/rvMBMOC/zjx
-        OluSLfi/1JgECxqc/v/fALRkrhkCdxhi4hlGZFoAwnnA4HKVxo+9FWlsgYfsqAVYDEXG6BZ0l/4D477i
-        T7SxABlgNRQZ09UCP/X//x/c/P8/yf7//7OH/v+vS8S0YJXJZ6jREIDVUGSMYoHa//83zv//n2Dz///R
-        Hf//V8XALEAtNZEBVkORMXFBhNeCaxiGImNiLPBV/gQ1btgBBgYANsXzqh/k0mYAAAAASUVORK5CYII=
+        gwAAAIMBYu+7WgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFUSURBVEhL7dQ9
+        S8NQGIbhI/4McRBBZ21xMEaxaaUg1S5FkSLaOIhDikgiOIhjqeAgCAXpVoWeoaiTIKVS4yKImx+T/oIU
+        6uBkHklQas5pQqPUofjCtYXnhkBCSOcelSuEyuClbghNdLOP+z8q1/jxT8WVJPu4//MKUPmZFOUYya8t
+        kgNFc7c+5diELpShC4aldiWaRnUclotyBF18BCSngGQ23WU1kw28QRfQTPxszn/A0mrg4TKE6Ok8tNJs
+        QyEB7XDBYXR/1RlAOlxBOmzYVMmEKsGWneQitkLA0/txkAvAVUn0HcBRwEdgJwSciEB+pCEzxMsN/zBg
+        USQg0uNtuq/NgWjvf6DJqFdgVzVtexv19gQcXy87yPrTwMwg8PIEpCaA2yqwvcwHaPD1F4EB4PEOWBoD
+        rs+BreRXwPnX/H7cIKu1V+QZuOdG/QZi/XV2t3PuAzbF86re3/AsAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="TTeditData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="TTtransactionNum.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>128, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAA

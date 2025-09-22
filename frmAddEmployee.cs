@@ -71,9 +71,14 @@ namespace EmployeeManagementSystem
             {
                 MessageBox.Show("Please fill up all the fields.", "Missing fields", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return;
-            } else if (!this.txtEmailAddress.Text.Contains("@firstasia.edu.ph"))
+            }
+            else if (!this.txtEmailAddress.Text.EndsWith("@firstasia.edu.ph"))
             {
                 MessageBox.Show("Please enter a valid First Asia email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } else if (txtLocalNumber.Text.Length != 4 || !txtLocalNumber.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("Please enter a valid 4-digit local number.", "Invalid Local Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -90,12 +95,16 @@ namespace EmployeeManagementSystem
 
                 if (result == DialogResult.Yes)
                 {
-                    if(!txtEmailAddress.Text.EndsWith("@firstasia.edu.ph"))
+                    if (!txtEmailAddress.Text.EndsWith("@firstasia.edu.ph"))
                     {
                         MessageBox.Show("Please enter a valid First Asia email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
+                    } else if (txtLocalNumber.Text.Length == 4 || !txtLocalNumber.Text.All(char.IsDigit))
+                    {
+                        MessageBox.Show("Please enter a valid 4-digit local number.", "Invalid Local Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
                     }
-                    string update_requestor = "UPDATE [tblEmployeeData] SET [RequestorName] = '" + txtRequestorName.Text + "', [RequestorEmail] = '" + txtEmailAddress.Text + "', [Section] = '" + cmbSection.Text + "', [LocalNumber] = '" + txtLocalNumber.Text + "' , [EmployeeNumber] = '" + txtEmpID.Text + "' WHERE [ID] = " + int.Parse(frmMasterData.selectedTransaction) + "";
+                        string update_requestor = "UPDATE [tblEmployeeData] SET [RequestorName] = '" + txtRequestorName.Text + "', [RequestorEmail] = '" + txtEmailAddress.Text + "', [Section] = '" + cmbSection.Text + "', [LocalNumber] = '" + txtLocalNumber.Text + "' , [EmployeeNumber] = '" + txtEmpID.Text + "' WHERE [ID] = " + int.Parse(frmMasterData.selectedTransaction) + "";
                     CRUD.CRUD.CUD(update_requestor);
                     MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -110,7 +119,8 @@ namespace EmployeeManagementSystem
                 {
                     MessageBox.Show("No changes were made.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadInputData();
-                } else
+                }
+                else
                 {
                     this.Close();
                 }
@@ -118,23 +128,23 @@ namespace EmployeeManagementSystem
             }
             else
             {
-                string add_requestor = "INSERT INTO [tblEmployeeData] ([EmployeeNumber],[RequestorName], [RequestorEmail], [Section],[LocalNumber]) VALUES ('" + txtEmpID.Text + "','" + txtRequestorName.Text + "','" + txtEmailAddress.Text + "','" + cmbSection.Text + "','" + txtEmailAddress.Text + "')";
+                string add_requestor = "INSERT INTO [tblEmployeeData] ([EmployeeNumber],[RequestorName], [RequestorEmail], [Section],[LocalNumber]) VALUES ('" + txtEmpID.Text + "','" + txtRequestorName.Text + "','" + txtEmailAddress.Text + "','" + cmbSection.Text + "','" + txtLocalNumber.Text + "')";
 
                 CRUD.CRUD.CUD(add_requestor);
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                //Afrer saving clear all fields
-                txtEmpID.Clear();
-                txtEmailAddress.Clear();
-                txtLocalNumber.Clear();
-                txtRequestorName.Clear();
-                cmbSection.Text = "";
-                this.Close();
+                clearAllFields();
             }
-            
+
 
         }
-
+        private void clearAllFields()
+        {
+            txtEmpID.Clear();
+            txtEmailAddress.Clear();
+            txtLocalNumber.Clear();
+            txtRequestorName.Clear();
+            cmbSection.Text = "";
+        }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -162,19 +172,36 @@ namespace EmployeeManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (frmMasterData.selectedTransaction == null || frmMasterData.selectedTransaction == "0" || string.IsNullOrEmpty(txtEmpID.Text))
+            {
+                MessageBox.Show("No selected data.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             DialogResult result = MessageBox.Show("Are you sure you want to delete this data?", "Delete Data", MessageBoxButtons.YesNo);
 
-            if(result == DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 string delete_requestor = "DELETE FROM [tblEmployeeData] WHERE ID = " + frmMasterData.selectedTransaction;
                 CRUD.CRUD.CUD(delete_requestor);
                 MessageBox.Show("Data has been deleted.", "Deleted.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
 
-            } else
+            }
+            else
             {
                 return;
             }
+        }
+
+        private void btnDelete_MouseEnter(object sender, EventArgs e)
+        {
+            btnDelete.BackColor = Color.FromArgb(14, 102, 85);
+        }
+
+        private void btnDelete_MouseLeave(object sender, EventArgs e)
+        {
+            btnDelete.BackColor = Color.FromArgb(26, 188, 156);
         }
     }
 }
