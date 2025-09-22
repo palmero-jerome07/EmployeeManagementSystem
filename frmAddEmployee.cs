@@ -107,11 +107,7 @@ namespace EmployeeManagementSystem
                     CRUD.CRUD.CUD(update_requestor);
                     MessageBox.Show("Updated Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    txtEmpID.Clear();
-                    txtEmailAddress.Clear();
-                    txtLocalNumber.Clear();
-                    txtRequestorName.Clear();
-                    cmbSection.Text = "";
+                    clearAllFields();
                     this.Close();
                 }
                 else if (result == DialogResult.No)
