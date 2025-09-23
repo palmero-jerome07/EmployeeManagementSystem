@@ -188,6 +188,10 @@ namespace EmployeeManagementSystem
         private void btnEditData_Click(object sender, EventArgs e)
         {
             frmAddEmployee openForm = new frmAddEmployee();
+            openForm.button1.Visible = true;
+            openForm.button2.Visible = true;
+            openForm.button3.Visible = true;
+            openForm.gboxInsertUpdate.Location = new Point(35, 48);
             openForm.ShowDialog();
             this.refreshData();
         }
