@@ -281,5 +281,61 @@ namespace EmployeeManagementSystem
                 Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
             }
         }
+
+        //Close button hover effects
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.FromArgb(231, 76, 60);
+            button1.ForeColor = Color.White;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.Transparent;
+            button1.ForeColor = Color.Black;
+        }
+        //Maximize button hover effects
+        private void button3_MouseEnter(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.Silver;
+        }
+
+        private void button3_MouseLeave(object sender, EventArgs e)
+        {
+            button3.BackColor = Color.Transparent;
+        }
+        //Minimize button hover effects
+        private void button2_MouseEnter_1(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Silver;
+        }
+
+        private void button2_MouseLeave_1(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.Transparent;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
+

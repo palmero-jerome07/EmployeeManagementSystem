@@ -31,6 +31,9 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
             panel1 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             pictureBox1 = new PictureBox();
             lblHeader = new Label();
             label2 = new Label();
@@ -64,6 +67,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(43, 77, 95);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(lblHeader);
             panel1.Dock = DockStyle.Top;
@@ -74,6 +80,60 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
+            // 
+            // button3
+            // 
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(489, 0);
+            button3.Name = "button3";
+            button3.Size = new Size(37, 27);
+            button3.TabIndex = 6;
+            button3.Text = "🗖";
+            button3.UseVisualStyleBackColor = true;
+            button3.Visible = false;
+            button3.Click += button3_Click;
+            button3.MouseEnter += button3_MouseEnter;
+            button3.MouseLeave += button3_MouseLeave;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(453, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(37, 27);
+            button2.TabIndex = 5;
+            button2.Text = "━";
+            button2.UseVisualStyleBackColor = true;
+            button2.Visible = false;
+            button2.Click += button2_Click_1;
+            button2.MouseEnter += button2_MouseEnter_1;
+            button2.MouseLeave += button2_MouseLeave_1;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(525, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(37, 27);
+            button1.TabIndex = 4;
+            button1.Text = "🗙";
+            button1.UseVisualStyleBackColor = true;
+            button1.Visible = false;
+            button1.Click += button1_Click_1;
+            button1.MouseEnter += button1_MouseEnter;
+            button1.MouseLeave += button1_MouseLeave;
             // 
             // pictureBox1
             // 
@@ -123,8 +183,8 @@
             gboxInsertUpdate.Controls.Add(label4);
             gboxInsertUpdate.Controls.Add(label3);
             gboxInsertUpdate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gboxInsertUpdate.ForeColor = SystemColors.ActiveCaptionText;
-            gboxInsertUpdate.Location = new Point(11, 50);
+            gboxInsertUpdate.ForeColor = Color.Black;
+            gboxInsertUpdate.Location = new Point(18, 48);
             gboxInsertUpdate.Name = "gboxInsertUpdate";
             gboxInsertUpdate.Size = new Size(524, 240);
             gboxInsertUpdate.TabIndex = 3;
@@ -290,6 +350,7 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             Name = "frmAddEmployee";
@@ -309,7 +370,6 @@
         private Panel panel1;
         private Label lblHeader;
         private Label label2;
-        private GroupBox gboxInsertUpdate;
         private Label label7;
         private Label label6;
         private Label label5;
@@ -335,5 +395,9 @@
         public Button btnClose;
         public Button btnMaximize;
         public Button btnMinimize;
+        public Button button3;
+        public Button button2;
+        public Button button1;
+        public GroupBox gboxInsertUpdate;
     }
 }
