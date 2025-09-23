@@ -236,7 +236,7 @@
             btnInsertUpdate.Name = "btnInsertUpdate";
             btnInsertUpdate.Size = new Size(109, 24);
             btnInsertUpdate.TabIndex = 10;
-            btnInsertUpdate.Text = "INSERT/UPDATE";
+            btnInsertUpdate.Text = "INSERT";
             TTinsertUpdate.SetToolTip(btnInsertUpdate, "Insert or update employee");
             btnInsertUpdate.UseVisualStyleBackColor = false;
             btnInsertUpdate.Click += btnInsertUpdate_Click;
@@ -376,7 +376,6 @@
         private Label label4;
         private Label label3;
         private Button btnSearch;
-        private Button btnInsertUpdate;
         private ComboBox cmbSection;
         private TextBox txtLocalNumber;
         private TextBox txtEmailAddress;
@@ -399,5 +398,6 @@
         public Button button2;
         public Button button1;
         public GroupBox gboxInsertUpdate;
+        public Button btnInsertUpdate;
     }
 }

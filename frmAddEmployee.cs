@@ -85,7 +85,7 @@ namespace EmployeeManagementSystem
 
             bool dtg_addrequestor = false;
             string EMS_data = string.Empty;
-            EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [ID] = " + frmMasterData.selectedTransaction + " OR [EmployeeNumber] = '" + txtEmpID.Text + "'";
+            EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [ID] = " + frmMasterData.selectedTransaction + " AND [EmployeeNumber] = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
 
             if (dtg_addrequestor == true)
