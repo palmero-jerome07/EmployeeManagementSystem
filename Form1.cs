@@ -76,6 +76,7 @@ namespace EmployeeManagementSystem
 
         private void btnMasterData_Click(object sender, EventArgs e)
         {
+            frmMasterData.selectedTransaction = "0";
             OpenChildForm(new frmMasterData());
         }
 
