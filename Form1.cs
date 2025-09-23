@@ -88,8 +88,6 @@ namespace EmployeeManagementSystem
             frmMasterData.LocalNumber = "";
             frmMasterData.EmployeeNumber = "";
             OpenChildForm(new frmAddEmployee());
-
-
         }
 
         private void btnMasterData_MouseEnter(object sender, EventArgs e)

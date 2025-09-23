@@ -76,7 +76,8 @@ namespace EmployeeManagementSystem
             {
                 MessageBox.Show("Please enter a valid First Asia email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            } else if (txtLocalNumber.Text.Length != 4 || !txtLocalNumber.Text.All(char.IsDigit))
+            }
+            else if (txtLocalNumber.Text.Length != 4 || !txtLocalNumber.Text.All(char.IsDigit))
             {
                 MessageBox.Show("Please enter a valid 4-digit local number.", "Invalid Local Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -98,7 +99,8 @@ namespace EmployeeManagementSystem
                     {
                         MessageBox.Show("Please enter a valid First Asia email address.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
-                    } else if (txtLocalNumber.Text.Length != 4 || !txtLocalNumber.Text.All(char.IsDigit))
+                    }
+                    else if (txtLocalNumber.Text.Length != 4 || !txtLocalNumber.Text.All(char.IsDigit))
                     {
                         MessageBox.Show("Please enter a valid 4-digit local number.", "Invalid Local Number", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -197,6 +199,87 @@ namespace EmployeeManagementSystem
         private void btnDelete_MouseLeave(object sender, EventArgs e)
         {
             btnDelete.BackColor = Color.FromArgb(26, 188, 156);
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.FromArgb(231, 76, 60);
+            btnClose.ForeColor = Color.White;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+            btnClose.ForeColor = Color.Black;
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMaximize.BackColor = Color.Silver;
+        }
+
+        private void btnMaximize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMaximize.BackColor = Color.Transparent;
+        }
+
+        private void btnMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Silver;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.BackColor = Color.Transparent;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Common.ReleaseCapture();
+                Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
+            }
+        }
+
+        private void lblHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Common.ReleaseCapture();
+                Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
+            }
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Common.ReleaseCapture();
+                Common.SendMessage(Handle, Common.WM_NCLBUTTONDOWN, Common.HT_CAPTION, 0);
+            }
         }
     }
 }
