@@ -29,10 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            //Button btnClose;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEmployee));
-            //Button btnMaximize;
-            //Button btnMinimize;
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             lblHeader = new Label();
@@ -59,9 +56,6 @@
             TTinsertUpdate = new ToolTip(components);
             TTsearch = new ToolTip(components);
             toolTip1 = new ToolTip(components);
-            btnClose = new Button();
-            btnMaximize = new Button();
-            btnMinimize = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             gboxInsertUpdate.SuspendLayout();
@@ -84,26 +78,6 @@
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
             // 
-            // btnClose
-            // 
-            btnClose.BackColor = Color.Transparent;
-            btnClose.Cursor = Cursors.Hand;
-            btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Segoe UI", 9.75F);
-            btnClose.ForeColor = Color.Black;
-            btnClose.ImeMode = ImeMode.NoControl;
-            btnClose.Location = new Point(558, 1);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(38, 27);
-            btnClose.TabIndex = 6;
-            btnClose.Text = "🗙";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Visible = false;
-            btnClose.Click += btnClose_Click;
-            btnClose.MouseEnter += btnClose_MouseEnter;
-            btnClose.MouseLeave += btnClose_MouseLeave;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -114,47 +88,6 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.MouseDown += pictureBox1_MouseDown;
-            // 
-            // btnMaximize
-            // 
-            btnMaximize.BackColor = Color.Transparent;
-            btnMaximize.Cursor = Cursors.Hand;
-            btnMaximize.FlatAppearance.BorderSize = 0;
-            btnMaximize.FlatStyle = FlatStyle.Flat;
-            btnMaximize.Font = new Font("Segoe UI", 11.25F);
-            btnMaximize.ForeColor = Color.Black;
-            btnMaximize.ImeMode = ImeMode.NoControl;
-            btnMaximize.Location = new Point(521, 1);
-            btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(38, 27);
-            btnMaximize.TabIndex = 5;
-            btnMaximize.Text = "🗖";
-            btnMaximize.UseVisualStyleBackColor = false;
-            btnMaximize.Visible = false;
-            btnMaximize.Click += btnMaximize_Click;
-            btnMaximize.MouseEnter += btnMaximize_MouseEnter;
-            btnMaximize.MouseLeave += btnMaximize_MouseLeave;
-            // 
-            // btnMinimize
-            // 
-            btnMinimize.BackColor = Color.Transparent;
-            btnMinimize.Cursor = Cursors.Hand;
-            btnMinimize.FlatAppearance.BorderSize = 0;
-            btnMinimize.FlatStyle = FlatStyle.Flat;
-            btnMinimize.Font = new Font("Segoe UI", 11.25F);
-            btnMinimize.ForeColor = Color.Black;
-            btnMinimize.ImeMode = ImeMode.NoControl;
-            btnMinimize.Location = new Point(487, 1);
-            btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(37, 27);
-            btnMinimize.TabIndex = 4;
-            btnMinimize.Text = "━";
-            TTreqName.SetToolTip(btnMinimize, "Minimize");
-            btnMinimize.UseVisualStyleBackColor = false;
-            btnMinimize.Visible = false;
-            btnMinimize.Click += btnMinimize_Click;
-            btnMinimize.MouseEnter += btnMinimize_MouseEnter;
-            btnMinimize.MouseLeave += btnMinimize_MouseLeave;
             // 
             // lblHeader
             // 
