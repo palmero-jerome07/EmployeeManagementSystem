@@ -90,7 +90,7 @@ namespace EmployeeManagementSystem
 
             if (dtg_addrequestor == true)
             {
-                DialogResult result = MessageBox.Show("This account '" + txtRequestorName.Text + "' is already exist. Wanna Update?", "Already Exists.",
+                DialogResult result = MessageBox.Show("This account '" + txtRequestorName.Text + "' already exist. Do you want to update?", "Already Exists.",
                     MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
 
                 if (result == DialogResult.Yes)
@@ -129,7 +129,7 @@ namespace EmployeeManagementSystem
 
                 CRUD.CRUD.CUD(add_requestor);
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clearAllFields();
+                this.Close();
             }
 
 
