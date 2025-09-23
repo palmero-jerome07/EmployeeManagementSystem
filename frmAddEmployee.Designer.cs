@@ -64,10 +64,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(43, 77, 95);
-            panel1.Controls.Add(btnClose);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btnMaximize);
-            panel1.Controls.Add(btnMinimize);
             panel1.Controls.Add(lblHeader);
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.FromArgb(236, 240, 241);
@@ -293,7 +290,6 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
-            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             Name = "frmAddEmployee";

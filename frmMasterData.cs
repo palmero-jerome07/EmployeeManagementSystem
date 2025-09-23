@@ -188,12 +188,6 @@ namespace EmployeeManagementSystem
         private void btnEditData_Click(object sender, EventArgs e)
         {
             frmAddEmployee openForm = new frmAddEmployee();
-            openForm.btnClose.Visible = true;
-            openForm.btnMaximize.Visible = true;
-            openForm.btnMinimize.Visible = true;
-            //openForm.btnClose.Location = new Point(524, 1);      // Adjust X as needed for your form width
-            //openForm.btnMaximize.Location = new Point(484, 1);   // Adjust X as needed
-            //openForm.btnMinimize.Location = new Point(444, 1);   // Adjust X as needed
             openForm.ShowDialog();
             this.refreshData();
         }
