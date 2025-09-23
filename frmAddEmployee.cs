@@ -119,7 +119,7 @@ namespace EmployeeManagementSystem
                 }
                 else
                 {
-                    this.Close();
+                    return;
                 }
 
             }
