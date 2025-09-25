@@ -33,22 +33,25 @@ namespace EmployeeManagementSystem
             {
                 MessageBox.Show("Please enter an Employee Number to search.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            } else if (!txtEmpID.Text.All(char.IsLetterOrDigit))
+            {
+                MessageBox.Show("Employee Number should be alphanumeric.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
-            string searchQuery = $"SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '{txtEmpID.Text}'";
+                string searchQuery = $"SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '{txtEmpID.Text}'";
 
             // Use CRUD.RETRIEVESINGLE to check if employee exists
             bool employeeExists = CRUD.CRUD.RETRIEVESINGLE(searchQuery);
 
             if (employeeExists)
             {
-                MessageBox.Show("Employee found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Employee with ID: '{txtEmpID.Text}' found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEmpID.Clear();
             }
             else
             {
                 MessageBox.Show("Employee not found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                // Optionally clear fields or handle as needed
                 txtEmpID.Clear();
             }
         }
