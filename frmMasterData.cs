@@ -164,7 +164,7 @@ namespace EmployeeManagementSystem
 
         private void lblMasterData_Click(object sender, EventArgs e)
         {
-
+            //
         }
 
         public void frmMasterData_Load(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace EmployeeManagementSystem
 
         private void dtgMasterData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //
         }
 
         private void dtgMasterData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

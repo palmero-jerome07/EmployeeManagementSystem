@@ -91,7 +91,7 @@ namespace EmployeeManagementSystem
             if (dtg_addrequestor == true)
             {
                 DialogResult result = MessageBox.Show("This account '" + txtRequestorName.Text + "' already exist. Do you want to update?", "Already Exists.",
-                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Asterisk);
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
 
                 if (result == DialogResult.Yes)
                 {
@@ -115,10 +115,12 @@ namespace EmployeeManagementSystem
                 else if (result == DialogResult.No)
                 {
                     MessageBox.Show("No changes were made.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadInputData();
+                    clearAllFields();
+                    this.Close();
                 }
                 else
                 {
+                    this.Close();
                     return;
                 }
 
