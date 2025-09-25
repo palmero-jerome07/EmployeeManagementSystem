@@ -193,6 +193,7 @@ namespace EmployeeManagementSystem
             openForm.button3.Visible = true;
             openForm.gboxInsertUpdate.Location = new Point(35, 48);
             openForm.btnInsertUpdate.Text = "INSERT/UPDATE";
+            openForm.StartPosition = FormStartPosition.CenterScreen;
             openForm.ShowDialog();
             this.refreshData();
         }
