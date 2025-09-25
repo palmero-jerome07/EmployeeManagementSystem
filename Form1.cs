@@ -76,11 +76,17 @@ namespace EmployeeManagementSystem
 
         private void btnMasterData_Click(object sender, EventArgs e)
         {
-            frmMasterData.selectedTransaction = "0";
+            setDetailsDefault();
             OpenChildForm(new frmMasterData());
         }
 
         private void btnAddEmp_Click(object sender, EventArgs e)
+        {
+            setDetailsDefault();
+            OpenChildForm(new frmAddEmployee());
+        }
+
+        public void setDetailsDefault()
         {
             frmMasterData.selectedTransaction = "0";
             frmMasterData.RequestorName = "";
@@ -88,7 +94,6 @@ namespace EmployeeManagementSystem
             frmMasterData.Section = "";
             frmMasterData.LocalNumber = "";
             frmMasterData.EmployeeNumber = "";
-            OpenChildForm(new frmAddEmployee());
         }
 
         private void btnMasterData_MouseEnter(object sender, EventArgs e)
