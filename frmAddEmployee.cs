@@ -206,61 +206,7 @@ namespace EmployeeManagementSystem
             btnDelete.BackColor = Color.FromArgb(26, 188, 156);
         }
 
-        private void btnClose_MouseEnter(object sender, EventArgs e)
-        {
-            btnClose.BackColor = Color.FromArgb(231, 76, 60);
-            btnClose.ForeColor = Color.White;
-        }
-
-        private void btnClose_MouseLeave(object sender, EventArgs e)
-        {
-            btnClose.BackColor = Color.Transparent;
-            btnClose.ForeColor = Color.Black;
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnMaximize_MouseEnter(object sender, EventArgs e)
-        {
-            btnMaximize.BackColor = Color.Silver;
-        }
-
-        private void btnMaximize_MouseLeave(object sender, EventArgs e)
-        {
-            btnMaximize.BackColor = Color.Transparent;
-        }
-
-        private void btnMinimize_MouseEnter(object sender, EventArgs e)
-        {
-            btnMinimize.BackColor = Color.Silver;
-        }
-
-        private void btnMinimize_MouseLeave(object sender, EventArgs e)
-        {
-            btnMinimize.BackColor = Color.Transparent;
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        public void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -269,7 +215,7 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void lblHeader_MouseDown(object sender, MouseEventArgs e)
+        public void lblHeader_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -278,7 +224,7 @@ namespace EmployeeManagementSystem
             }
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        public void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
