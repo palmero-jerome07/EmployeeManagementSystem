@@ -181,6 +181,12 @@ namespace EmployeeManagementSystem
         private void dtgMasterData_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             lblTransactionNo.Text = dtgMasterData.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+            selectedTransaction = lblTransactionNo.Text;
+            EmployeeNumber = dtgMasterData.Rows[e.RowIndex].Cells["EmployeeNumber"].Value.ToString();
+            RequestorName = dtgMasterData.Rows[e.RowIndex].Cells["RequestorName"].Value.ToString();
+            EmailAddress = dtgMasterData.Rows[e.RowIndex].Cells["RequestorEmail"].Value.ToString();
+            Section = dtgMasterData.Rows[e.RowIndex].Cells["Section"].Value.ToString();
+            LocalNumber = dtgMasterData.Rows[e.RowIndex].Cells["LocalNumber"].Value.ToString();
         }
 
         public static string selectedTransaction, RequestorName, EmailAddress, Section, LocalNumber, EmployeeNumber;
