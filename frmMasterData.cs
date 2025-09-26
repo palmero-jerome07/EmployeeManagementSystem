@@ -200,6 +200,9 @@ namespace EmployeeManagementSystem
             openForm.gboxInsertUpdate.Location = new Point(35, 48);
             openForm.btnInsertUpdate.Text = "INSERT/UPDATE";
             openForm.StartPosition = FormStartPosition.CenterScreen;
+            openForm.panel1.MouseDown += openForm.panel1_MouseDown;
+            openForm.pictureBox1.MouseDown += openForm.pictureBox1_MouseDown;
+            openForm.lblHeader.MouseDown += openForm.lblHeader_MouseDown;
             openForm.ShowDialog();
             this.refreshData();
         }

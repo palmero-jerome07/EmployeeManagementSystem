@@ -79,7 +79,6 @@
             panel1.Size = new Size(562, 28);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
-            panel1.MouseDown += panel1_MouseDown;
             // 
             // button3
             // 
@@ -144,7 +143,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            pictureBox1.MouseDown += pictureBox1_MouseDown;
             // 
             // lblHeader
             // 
@@ -155,7 +153,6 @@
             lblHeader.Size = new Size(108, 20);
             lblHeader.TabIndex = 0;
             lblHeader.Text = "Add Employee";
-            lblHeader.MouseDown += lblHeader_MouseDown;
             // 
             // label2
             // 
@@ -367,8 +364,8 @@
 
         #endregion
 
-        private Panel panel1;
-        private Label lblHeader;
+        public Panel panel1;
+        public Label lblHeader;
         private Label label2;
         private Label label7;
         private Label label6;
@@ -388,7 +385,7 @@
         private ToolTip TTsection;
         private ToolTip TTinsertUpdate;
         private ToolTip TTsearch;
-        private PictureBox pictureBox1;
+        public PictureBox pictureBox1;
         private Button btnDelete;
         private ToolTip toolTip1;
         public Button btnClose;
