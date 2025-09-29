@@ -136,7 +136,7 @@
 </value>
   </data>
   <data name="btnAddEmp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 154</value>
+    <value>0, 148</value>
   </data>
   <data name="btnAddEmp.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 46</value>
@@ -165,7 +165,7 @@
 </value>
   </data>
   <data name="btnMasterData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 108</value>
+    <value>0, 102</value>
   </data>
   <data name="btnMasterData.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 46</value>
@@ -186,20 +186,29 @@
   <data name="lblAge.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblAge.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 9pt</value>
+  </data>
   <data name="lblAge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblAge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 67</value>
+  </data>
   <data name="lblAge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 15</value>
+    <value>47, 17</value>
   </data>
   <data name="lblAge.Text" xml:space="preserve">
     <value>&lt;AGE&gt;</value>
   </data>
   <data name="lblSection.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9pt, style=Bold</value>
+    <value>Century Gothic, 9pt</value>
   </data>
   <data name="lblSection.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="lblSection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 43</value>
   </data>
   <data name="lblSection.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 15</value>
@@ -208,7 +217,7 @@
     <value>&lt;SECTION&gt;</value>
   </data>
   <data name="lblFullName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt, style=Bold</value>
+    <value>Century Gothic, 12pt, style=Bold</value>
   </data>
   <data name="lblFullName.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 23</value>
@@ -220,7 +229,7 @@
     <value>Top</value>
   </data>
   <data name="pnlInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 108</value>
+    <value>189, 102</value>
   </data>
   <data name="pnlSideMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 322</value>

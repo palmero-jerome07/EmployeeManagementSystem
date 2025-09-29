@@ -74,6 +74,7 @@ namespace EmployeeManagementSystem
 
                         frmMotherForm openForm = new frmMotherForm();
                         openForm.ShowDialog();
+                        this.Close();
                     } else
                     {
                         MessageBox.Show("Invalid username or password.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,7 +82,7 @@ namespace EmployeeManagementSystem
                     }
                 } else
                 {
-                    MessageBox.Show("No data found.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No user found.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
