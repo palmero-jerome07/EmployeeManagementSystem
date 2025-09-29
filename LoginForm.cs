@@ -23,7 +23,8 @@ namespace EmployeeManagementSystem
         {
 
         }
-
+        private string dbEmail, dbPassword;
+        public static string fullname = "", section = "", age = "";
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
@@ -50,8 +51,7 @@ namespace EmployeeManagementSystem
                 string sql = $"SELECT [FullName], [Section], [Age], [Username], [Password] FROM tblUsers WHERE Username = '{username}' AND Password = '{password}'";
                 bool isAuthenticated = CRUD.CRUD.RETRIEVESINGLE(sql);
 
-                string dbEmail, dbPassword;
-                string fullname, section, age;
+                
                 int dtCount = CRUD.CRUD.dt.Rows.Count;
                 
                 if(isAuthenticated && dtCount > 0)
