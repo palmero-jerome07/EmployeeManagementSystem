@@ -169,7 +169,7 @@ namespace EmployeeManagementSystem
 
         private void button2_MouseLeave(object sender, EventArgs e)
         {
-            btnInsertUpdate.BackColor = Color.FromArgb(26, 188, 156);
+            btnSearch.BackColor = Color.FromArgb(26, 188, 156);
         }
 
         private void button1_Click(object sender, EventArgs e)
