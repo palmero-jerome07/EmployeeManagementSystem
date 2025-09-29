@@ -90,7 +90,7 @@
             button3.Location = new Point(489, 0);
             button3.Name = "button3";
             button3.Size = new Size(37, 27);
-            button3.TabIndex = 6;
+            button3.TabIndex = 10;
             button3.Text = "🗖";
             button3.UseVisualStyleBackColor = true;
             button3.Visible = false;
@@ -108,7 +108,7 @@
             button2.Location = new Point(453, 0);
             button2.Name = "button2";
             button2.Size = new Size(37, 27);
-            button2.TabIndex = 5;
+            button2.TabIndex = 9;
             button2.Text = "━";
             button2.UseVisualStyleBackColor = true;
             button2.Visible = false;
@@ -126,7 +126,7 @@
             button1.Location = new Point(525, 0);
             button1.Name = "button1";
             button1.Size = new Size(37, 27);
-            button1.TabIndex = 4;
+            button1.TabIndex = 11;
             button1.Text = "🗙";
             button1.UseVisualStyleBackColor = true;
             button1.Visible = false;
@@ -198,7 +198,7 @@
             btnDelete.Location = new Point(251, 185);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(60, 24);
-            btnDelete.TabIndex = 12;
+            btnDelete.TabIndex = 8;
             btnDelete.Text = "DELETE";
             TTinsertUpdate.SetToolTip(btnDelete, "Insert or update employee");
             btnDelete.UseVisualStyleBackColor = false;
@@ -215,7 +215,7 @@
             btnSearch.Location = new Point(418, 37);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(95, 23);
-            btnSearch.TabIndex = 11;
+            btnSearch.TabIndex = 7;
             btnSearch.Text = "Search";
             TTsearch.SetToolTip(btnSearch, "Search employee");
             btnSearch.UseVisualStyleBackColor = false;
@@ -232,7 +232,7 @@
             btnInsertUpdate.Location = new Point(136, 185);
             btnInsertUpdate.Name = "btnInsertUpdate";
             btnInsertUpdate.Size = new Size(109, 24);
-            btnInsertUpdate.TabIndex = 10;
+            btnInsertUpdate.TabIndex = 6;
             btnInsertUpdate.Text = "INSERT";
             TTinsertUpdate.SetToolTip(btnInsertUpdate, "Insert or update employee");
             btnInsertUpdate.UseVisualStyleBackColor = false;
@@ -250,7 +250,7 @@
             cmbSection.Location = new Point(136, 156);
             cmbSection.Name = "cmbSection";
             cmbSection.Size = new Size(109, 23);
-            cmbSection.TabIndex = 9;
+            cmbSection.TabIndex = 5;
             TTsection.SetToolTip(cmbSection, "Select department");
             // 
             // txtLocalNumber
@@ -260,7 +260,7 @@
             txtLocalNumber.MaxLength = 4;
             txtLocalNumber.Name = "txtLocalNumber";
             txtLocalNumber.Size = new Size(109, 23);
-            txtLocalNumber.TabIndex = 8;
+            txtLocalNumber.TabIndex = 4;
             TTlocalNum.SetToolTip(txtLocalNumber, "Input local number");
             // 
             // txtEmailAddress
@@ -269,7 +269,7 @@
             txtEmailAddress.Location = new Point(136, 96);
             txtEmailAddress.Name = "txtEmailAddress";
             txtEmailAddress.Size = new Size(328, 23);
-            txtEmailAddress.TabIndex = 7;
+            txtEmailAddress.TabIndex = 3;
             TTemailAdd.SetToolTip(txtEmailAddress, "Input email address");
             // 
             // txtRequestorName
@@ -278,7 +278,7 @@
             txtRequestorName.Location = new Point(136, 67);
             txtRequestorName.Name = "txtRequestorName";
             txtRequestorName.Size = new Size(328, 23);
-            txtRequestorName.TabIndex = 6;
+            txtRequestorName.TabIndex = 2;
             TTreqName.SetToolTip(txtRequestorName, "Input requestor name");
             // 
             // txtEmpID
@@ -288,7 +288,7 @@
             txtEmpID.Location = new Point(136, 37);
             txtEmpID.Name = "txtEmpID";
             txtEmpID.Size = new Size(276, 23);
-            txtEmpID.TabIndex = 5;
+            txtEmpID.TabIndex = 1;
             TTempNum.SetToolTip(txtEmpID, "Input Employee Number");
             // 
             // label7
