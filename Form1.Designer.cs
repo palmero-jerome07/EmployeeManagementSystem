@@ -35,6 +35,10 @@
             btnAddEmp = new Button();
             btnMasterData = new Button();
             panel1 = new Panel();
+            panel2 = new Panel();
+            lblAge = new Label();
+            lblSection = new Label();
+            lblFullName = new Label();
             pnlTitleBar = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -51,6 +55,7 @@
             TTversion = new ToolTip(components);
             TTfooter = new ToolTip(components);
             pnlSideMenu.SuspendLayout();
+            panel2.SuspendLayout();
             pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -64,6 +69,7 @@
             pnlSideMenu.Controls.Add(btnAddEmp);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Controls.Add(panel1);
+            pnlSideMenu.Controls.Add(panel2);
             pnlSideMenu.Name = "pnlSideMenu";
             TTclose.SetToolTip(pnlSideMenu, resources.GetString("pnlSideMenu.ToolTip"));
             TTmasterData.SetToolTip(pnlSideMenu, resources.GetString("pnlSideMenu.ToolTip1"));
@@ -93,6 +99,7 @@
             resources.ApplyResources(btnAddEmp, "btnAddEmp");
             btnAddEmp.BackColor = Color.FromArgb(60, 173, 150);
             btnAddEmp.Cursor = Cursors.Hand;
+            btnAddEmp.FlatAppearance.BorderColor = Color.Black;
             btnAddEmp.ForeColor = Color.White;
             btnAddEmp.Name = "btnAddEmp";
             TTminimize.SetToolTip(btnAddEmp, resources.GetString("btnAddEmp.ToolTip"));
@@ -112,6 +119,7 @@
             resources.ApplyResources(btnMasterData, "btnMasterData");
             btnMasterData.BackColor = Color.FromArgb(60, 173, 150);
             btnMasterData.Cursor = Cursors.Hand;
+            btnMasterData.FlatAppearance.BorderColor = Color.Black;
             btnMasterData.ForeColor = Color.White;
             btnMasterData.Name = "btnMasterData";
             TTminimize.SetToolTip(btnMasterData, resources.GetString("btnMasterData.ToolTip"));
@@ -137,6 +145,60 @@
             TTminimize.SetToolTip(panel1, resources.GetString("panel1.ToolTip4"));
             TTversion.SetToolTip(panel1, resources.GetString("panel1.ToolTip5"));
             TTmaximize.SetToolTip(panel1, resources.GetString("panel1.ToolTip6"));
+            // 
+            // panel2
+            // 
+            resources.ApplyResources(panel2, "panel2");
+            panel2.Controls.Add(lblAge);
+            panel2.Controls.Add(lblSection);
+            panel2.Controls.Add(lblFullName);
+            panel2.Name = "panel2";
+            TTclose.SetToolTip(panel2, resources.GetString("panel2.ToolTip"));
+            TTmasterData.SetToolTip(panel2, resources.GetString("panel2.ToolTip1"));
+            TTinsertUpdateEmployee.SetToolTip(panel2, resources.GetString("panel2.ToolTip2"));
+            TTfooter.SetToolTip(panel2, resources.GetString("panel2.ToolTip3"));
+            TTminimize.SetToolTip(panel2, resources.GetString("panel2.ToolTip4"));
+            TTversion.SetToolTip(panel2, resources.GetString("panel2.ToolTip5"));
+            TTmaximize.SetToolTip(panel2, resources.GetString("panel2.ToolTip6"));
+            // 
+            // lblAge
+            // 
+            resources.ApplyResources(lblAge, "lblAge");
+            lblAge.ForeColor = Color.White;
+            lblAge.Name = "lblAge";
+            TTmasterData.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip"));
+            TTminimize.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip1"));
+            TTmaximize.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip2"));
+            TTversion.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip3"));
+            TTclose.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip4"));
+            TTfooter.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip5"));
+            TTinsertUpdateEmployee.SetToolTip(lblAge, resources.GetString("lblAge.ToolTip6"));
+            // 
+            // lblSection
+            // 
+            resources.ApplyResources(lblSection, "lblSection");
+            lblSection.ForeColor = Color.White;
+            lblSection.Name = "lblSection";
+            TTmasterData.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip"));
+            TTminimize.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip1"));
+            TTmaximize.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip2"));
+            TTversion.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip3"));
+            TTclose.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip4"));
+            TTfooter.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip5"));
+            TTinsertUpdateEmployee.SetToolTip(lblSection, resources.GetString("lblSection.ToolTip6"));
+            // 
+            // lblFullName
+            // 
+            resources.ApplyResources(lblFullName, "lblFullName");
+            lblFullName.ForeColor = Color.White;
+            lblFullName.Name = "lblFullName";
+            TTmasterData.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip"));
+            TTminimize.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip1"));
+            TTmaximize.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip2"));
+            TTversion.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip3"));
+            TTclose.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip4"));
+            TTfooter.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip5"));
+            TTinsertUpdateEmployee.SetToolTip(lblFullName, resources.GetString("lblFullName.ToolTip6"));
             // 
             // pnlTitleBar
             // 
@@ -294,6 +356,8 @@
             Load += frmMotherForm_Load;
             pnlSideMenu.ResumeLayout(false);
             pnlSideMenu.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             pnlTitleBar.ResumeLayout(false);
             pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -322,5 +386,9 @@
         private ToolTip TTinsertUpdateEmployee;
         private ToolTip TTversion;
         private ToolTip TTfooter;
+        private Panel panel2;
+        private Label lblAge;
+        private Label lblSection;
+        private Label lblFullName;
     }
 }

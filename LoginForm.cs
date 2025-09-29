@@ -19,9 +19,6 @@ namespace EmployeeManagementSystem
         {
             InitializeComponent();
         }
-
-        public string username, age, section;
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
@@ -54,7 +51,7 @@ namespace EmployeeManagementSystem
                 bool isAuthenticated = CRUD.CRUD.RETRIEVESINGLE(sql);
 
                 string dbEmail, dbPassword;
-                string fullname, Section, Age;
+                string fullname, section, age;
                 int dtCount = CRUD.CRUD.dt.Rows.Count;
                 
                 if(isAuthenticated && dtCount > 0)
@@ -66,8 +63,8 @@ namespace EmployeeManagementSystem
                     if(dbEmail.Equals(username, StringComparison.Ordinal) && dbPassword.Equals(password, StringComparison.Ordinal))
                     {
                         fullname = CRUD.CRUD.dt.Rows[0]["FullName"].ToString();
-                        Section = CRUD.CRUD.dt.Rows[0]["Section"].ToString();
-                        Age = CRUD.CRUD.dt.Rows[0]["Age"].ToString();
+                        section = CRUD.CRUD.dt.Rows[0]["Section"].ToString();
+                        age = CRUD.CRUD.dt.Rows[0]["Age"].ToString();
 
                         MessageBox.Show($"Welcome to EMS, {fullname}!", "Login Successfully");
                         this.Hide();

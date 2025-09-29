@@ -120,6 +120,10 @@
   <data name="lblFooter.ToolTip5" xml:space="preserve">
     <value>All rights reserved. EMS.</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnAddEmp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAddEmp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -135,18 +139,23 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnAddEmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 134</value>
+  </data>
   <data name="btnAddEmp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 46</value>
+    <value>191, 46</value>
   </data>
   <data name="btnAddEmp.Text" xml:space="preserve">
     <value>ADD EMPLOYEE</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnAddEmp.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
   </data>
   <data name="btnAddEmp.ToolTip4" xml:space="preserve">
     <value />
+  </data>
+  <data name="btnMasterData.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
   <data name="btnMasterData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -161,8 +170,11 @@
         KsZtM09yrLK/Wynoso1q8vQF8kUhBGXnS+sAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="btnMasterData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 88</value>
+  </data>
   <data name="btnMasterData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 46</value>
+    <value>191, 46</value>
   </data>
   <data name="btnMasterData.Text" xml:space="preserve">
     <value> MASTER DATA</value>
@@ -176,10 +188,61 @@
   <data name="btnMasterData.ToolTip4" xml:space="preserve">
     <value>Show Master Data</value>
   </data>
-  <data name="pnlSideMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 322</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblAge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblAge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblAge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 15</value>
+  </data>
+  <data name="lblAge.Text" xml:space="preserve">
+    <value>&lt;AGE&gt;</value>
+  </data>
+  <data name="lblSection.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSection.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="lblSection.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 17</value>
+  </data>
+  <data name="lblSection.Text" xml:space="preserve">
+    <value>&lt;SECTION&gt;</value>
+  </data>
+  <data name="lblFullName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblFullName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFullName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="lblFullName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 20</value>
+  </data>
+  <data name="lblFullName.Text" xml:space="preserve">
+    <value>&lt;FULLNAME&gt;</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 88</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="pnlSideMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 322</value>
+  </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -283,10 +346,10 @@
     <value />
   </data>
   <data name="pnlStage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>191, 51</value>
+    <value>193, 51</value>
   </data>
   <data name="pnlStage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>557, 322</value>
+    <value>555, 322</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

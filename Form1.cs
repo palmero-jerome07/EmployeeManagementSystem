@@ -15,6 +15,9 @@ namespace EmployeeManagementSystem
         public frmMotherForm()
         {
             InitializeComponent();
+            lblFullName.Text = LoginForm.fullname;
+            lblAge.Text = LoginForm.age;
+            lblSection.Text = LoginForm.section;
         }
 
 
