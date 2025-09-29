@@ -4,8 +4,8 @@
 This is a **Windows Forms application** that helps manage employee records.  
 It uses **MS Access as the database** and provides a simple interface for CRUD operations.  
 
----
-
+--- 
+ 
 ## ⚙️ Functionality 
 - Add new employee records  
 - View employee lists  
