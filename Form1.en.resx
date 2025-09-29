@@ -136,7 +136,7 @@
 </value>
   </data>
   <data name="btnAddEmp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 154</value>
+    <value>0, 148</value>
   </data>
   <data name="btnAddEmp.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 46</value>
@@ -165,7 +165,7 @@
 </value>
   </data>
   <data name="btnMasterData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 108</value>
+    <value>0, 102</value>
   </data>
   <data name="btnMasterData.Size" type="System.Drawing.Size, System.Drawing">
     <value>189, 46</value>
@@ -192,6 +192,9 @@
   <data name="lblAge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblAge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 67</value>
+  </data>
   <data name="lblAge.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 17</value>
   </data>
@@ -203,6 +206,9 @@
   </data>
   <data name="lblSection.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="lblSection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 43</value>
   </data>
   <data name="lblSection.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 15</value>
@@ -223,7 +229,7 @@
     <value>Top</value>
   </data>
   <data name="pnlInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 108</value>
+    <value>189, 102</value>
   </data>
   <data name="pnlSideMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 322</value>
