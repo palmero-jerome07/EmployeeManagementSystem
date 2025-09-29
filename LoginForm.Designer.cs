@@ -42,6 +42,7 @@
             lblHeader.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblHeader.AutoSize = true;
             lblHeader.Font = new Font("Segoe UI Semibold", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHeader.ForeColor = Color.White;
             lblHeader.Location = new Point(157, 10);
             lblHeader.Name = "lblHeader";
             lblHeader.Size = new Size(164, 86);
@@ -52,6 +53,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsername.ForeColor = Color.White;
             lblUsername.Location = new Point(65, 109);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(81, 21);
@@ -62,6 +64,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPassword.ForeColor = Color.White;
             lblPassword.Location = new Point(70, 156);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(76, 21);
@@ -81,12 +84,14 @@
             txtPassword.Location = new Point(152, 156);
             txtPassword.MaxLength = 50;
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(262, 23);
             txtPassword.TabIndex = 5;
             // 
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.Black;
             btnLogin.Location = new Point(350, 195);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(64, 26);
@@ -99,6 +104,8 @@
             // 
             linklblCreateAccount.AutoSize = true;
             linklblCreateAccount.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            linklblCreateAccount.ForeColor = Color.White;
+            linklblCreateAccount.LinkColor = Color.White;
             linklblCreateAccount.Location = new Point(311, 224);
             linklblCreateAccount.Name = "linklblCreateAccount";
             linklblCreateAccount.Size = new Size(103, 15);
@@ -110,6 +117,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(43, 77, 95);
             ClientSize = new Size(485, 267);
             Controls.Add(linklblCreateAccount);
             Controls.Add(btnLogin);
@@ -119,6 +127,7 @@
             Controls.Add(lblUsername);
             Controls.Add(lblHeader);
             Name = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginForm";
             Load += LoginForm_Load;
             ResumeLayout(false);
