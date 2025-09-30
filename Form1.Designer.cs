@@ -47,6 +47,7 @@
             btnMaximize = new Button();
             btnMinimize = new Button();
             pnlStage = new Panel();
+            lblWelcome = new Label();
             TTminimize = new ToolTip(components);
             TTmaximize = new ToolTip(components);
             TTclose = new ToolTip(components);
@@ -58,6 +59,7 @@
             pnlInformation.SuspendLayout();
             pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlStage.SuspendLayout();
             SuspendLayout();
             // 
             // pnlSideMenu
@@ -326,6 +328,7 @@
             // 
             resources.ApplyResources(pnlStage, "pnlStage");
             pnlStage.BackColor = Color.FromArgb(245, 246, 250);
+            pnlStage.Controls.Add(lblWelcome);
             pnlStage.Name = "pnlStage";
             TTclose.SetToolTip(pnlStage, resources.GetString("pnlStage.ToolTip"));
             TTmasterData.SetToolTip(pnlStage, resources.GetString("pnlStage.ToolTip1"));
@@ -336,6 +339,19 @@
             TTmaximize.SetToolTip(pnlStage, resources.GetString("pnlStage.ToolTip6"));
             pnlStage.MouseEnter += pnlStage_MouseEnter;
             pnlStage.MouseLeave += pnlStage_MouseLeave;
+            // 
+            // lblWelcome
+            // 
+            resources.ApplyResources(lblWelcome, "lblWelcome");
+            lblWelcome.ForeColor = Color.FromArgb(43, 77, 95);
+            lblWelcome.Name = "lblWelcome";
+            TTmasterData.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip"));
+            TTminimize.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip1"));
+            TTmaximize.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip2"));
+            TTversion.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip3"));
+            TTclose.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip4"));
+            TTfooter.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip5"));
+            TTinsertUpdateEmployee.SetToolTip(lblWelcome, resources.GetString("lblWelcome.ToolTip6"));
             // 
             // frmMotherForm
             // 
@@ -362,6 +378,8 @@
             pnlTitleBar.ResumeLayout(false);
             pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnlStage.ResumeLayout(false);
+            pnlStage.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -391,5 +409,6 @@
         private Label lblAge;
         private Label lblSection;
         private Label lblFullName;
+        private Label lblWelcome;
     }
 }

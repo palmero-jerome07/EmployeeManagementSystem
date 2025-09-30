@@ -336,6 +336,19 @@
   <data name="btnMinimize.ToolTip3" xml:space="preserve">
     <value />
   </data>
+  <data name="lblWelcome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWelcome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Perpetua Titling MT, 27.75pt, style=Bold</value>
+  </data>
+  <data name="lblWelcome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>519, 88</value>
+  </data>
+  <data name="lblWelcome.Text" xml:space="preserve">
+    <value>WELCOME TO EMPLOYEE 
+MANAGEMENT SYSTEM</value>
+  </data>
   <data name="pnlStage.Location" type="System.Drawing.Point, System.Drawing">
     <value>191, 51</value>
   </data>
