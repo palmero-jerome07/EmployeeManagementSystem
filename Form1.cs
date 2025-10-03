@@ -17,7 +17,7 @@ namespace EmployeeManagementSystem
             InitializeComponent();
             lblFullName.Text = LoginForm.fullname;
             lblSection.Text = LoginForm.section;
-            lblAge.Text = LoginForm.age;
+            lblAge.Text = LoginForm.age; 
             lblWelcome.Text = "WELCOME TO EMPLOYEE \nMANAGEMENT SYSTEM, \n" + LoginForm.fullname;
         }
 
